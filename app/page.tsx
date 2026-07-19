@@ -1,6 +1,6 @@
 import Link from "next/link";
 import BlogCard from "@/components/BlogCard";
-import { getFeaturedPosts, allPosts } from "@/data/posts";
+import { getFeaturedPosts } from "@/data/posts";
 
 const featuredPosts = getFeaturedPosts();
 

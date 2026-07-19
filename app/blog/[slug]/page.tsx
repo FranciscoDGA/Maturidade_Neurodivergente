@@ -81,8 +81,9 @@ const relatedPosts = [
   },
 ];
 
-export default function BlogPost({ params }: { params: { slug: string } }) {
-  const post = postData[params.slug] || postData["neurodiversidade-101"];
+export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = postData[slug] || postData["neurodiversidade-101"];
   const formattedDate = new Date(post.date).toLocaleDateString("pt-BR", {
     year: "numeric",
     month: "long",
@@ -166,13 +167,7 @@ function formatContent(markdown: string): string {
 
   // Lists
   html = html.replace(/^\- (.*?)$/gm, "<li>$1</li>");
-  html = html.replace(/(<li>.*?<\/li>)/s, "<ul>$1</ul>");
+  html = html.replace(/(<li>[\s\S]*?<\/li>)/, "<ul>$1</ul>");
 
-  // Paragraphs
-  html = html.split("\n\n").map((p) => {
-    if (p.match(/^<[hlu]/)) return p;
-    return `<p>${p.trim()}</p>`;
-  });
-
-  return html.join("\n");
+  return html;
 }
