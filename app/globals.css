@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply border-neutral-200 dark:border-neutral-800;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-neutral-900 dark:bg-dark-bg dark:text-dark-text;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Acessibilidade: Reduz animações para usuários com preferência */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Skip to main content link (acessibilidade) */
+.skip-to-main {
+  @apply absolute -top-full left-0 z-50 bg-primary-500 text-white px-4 py-2 rounded;
+}
+
+.skip-to-main:focus {
+  @apply top-0;
+}
+
+/* Melhor contraste para links */
+a {
+  @apply text-primary-500 hover:text-primary-700 dark:hover:text-primary-400 transition-colors underline-offset-2 hover:underline;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold tracking-tight;
+}
+
+h1 {
+  @apply text-5xl leading-tight;
+}
+
+h2 {
+  @apply text-3xl leading-snug mt-8 mb-4;
+}
+
+h3 {
+  @apply text-2xl leading-snug mt-6 mb-3;
+}
+
+/* Code blocks */
+code {
+  @apply bg-neutral-100 dark:bg-dark-card px-2 py-1 rounded font-mono text-sm;
+}
+
+pre {
+  @apply bg-neutral-100 dark:bg-dark-card p-4 rounded-lg overflow-x-auto my-4;
+}
+
+pre code {
+  @apply bg-transparent px-0 py-0;
+}
