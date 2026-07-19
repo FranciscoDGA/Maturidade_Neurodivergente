@@ -1,29 +1,8 @@
 import Link from "next/link";
 import BlogCard from "@/components/BlogCard";
+import { getFeaturedPosts, allPosts } from "@/data/posts";
 
-const featuredPosts = [
-  {
-    slug: "neurodiversidade-101",
-    title: "Neurodiversidade 101: Entendendo o Espectro",
-    excerpt: "Uma introdução acessível ao conceito de neurodiversidade e por que isso importa para sua vida.",
-    category: "Neurodiversidade 101",
-    date: "2026-07-15",
-  },
-  {
-    slug: "maturidade-emocional",
-    title: "Maturidade Emocional: Além do Diagnóstico",
-    excerpt: "Como desenvolver inteligência emocional sendo neurodivergente. Dicas práticas e inclusivas.",
-    category: "Maturidade Emocional",
-    date: "2026-07-10",
-  },
-  {
-    slug: "autoconhecimento-neurodivergente",
-    title: "Autoconhecimento Neurodivergente: Seu Guia Pessoal",
-    excerpt: "Ferramentas e exercícios para entender seus padrões únicos de funcionamento.",
-    category: "Autoconhecimento",
-    date: "2026-07-05",
-  },
-];
+const featuredPosts = getFeaturedPosts();
 
 export default function Home() {
   return (
