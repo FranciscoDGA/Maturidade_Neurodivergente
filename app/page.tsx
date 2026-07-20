@@ -31,7 +31,7 @@ export default function Home() {
             Um espaço calmo para mentes ativas. Sem ruído — apenas reflexão, significado e curiosidade.
           </p>
           <Link href="/blog" className="inline-flex items-center text-sm font-bold uppercase tracking-wider text-neutral-900 dark:text-white hover:opacity-70 transition-opacity">
-            Leia os artigos <span className="ml-2 bg-neutral-100 dark:bg-neutral-800 p-2 rounded-full">→</</span>
+            Leia os artigos <span className="ml-2 bg-neutral-100 dark:bg-neutral-800 p-2 rounded-full">&rarr;</span>
           </Link>
         </div>
       </div>
