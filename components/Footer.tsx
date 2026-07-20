@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="font-black tracking-tighter text-neutral-900 dark:text-white mb-4 flex items-center gap-1">
               <span className="text-primary-600 dark:text-primary-500 font-extrabold tracking-tight">M</span>
-              <span className="text-neutral-900 dark:text-white font-light tracking-widest uppercase text-sm mt-1">Neurodivergente</span>
+              <span className="text-neutral-900 dark:text-white font-light tracking-widest uppercase text-[10px] sm:text-xs md:text-sm mt-1">Neurodivergente</span>
             </div>
             <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed max-w-md">
               Um espaço inclusivo dedicado a explorar maturidade neurodivergente com clareza, compaixão e acessibilidade. Crescendo fora dos padrões.

@@ -22,7 +22,7 @@ export default function Home() {
       {/* Header Section */}
       <div className="flex flex-col md:flex-row justify-between items-end border-b-2 border-neutral-900 dark:border-white pb-6 mb-12">
         <div>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-neutral-900 dark:text-white leading-none">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-neutral-900 dark:text-white leading-none break-words hyphens-auto" lang="pt-BR">
             Maturidade <br/> Neurodivergente
           </h1>
         </div>

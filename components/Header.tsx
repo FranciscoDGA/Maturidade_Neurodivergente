@@ -21,10 +21,10 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="group text-2xl font-black tracking-tighter text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg px-2 flex items-center gap-1"
+            className="group text-2xl font-black tracking-tighter text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg px-1 flex items-center gap-1 shrink-0"
           >
             <span className="text-primary-600 dark:text-primary-500 font-extrabold tracking-tight">M</span>
-            <span className="text-neutral-900 dark:text-white font-light tracking-widest uppercase text-sm mt-1">Neurodivergente</span>
+            <span className="text-neutral-900 dark:text-white font-light tracking-widest uppercase text-[10px] sm:text-xs md:text-sm mt-1">Neurodivergente</span>
           </Link>
 
           {/* Desktop Navigation */}
