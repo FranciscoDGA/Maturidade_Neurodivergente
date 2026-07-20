@@ -10,6 +10,7 @@ export const allPosts: PostMetadata[] = [
     date: "2026-07-20",
     keywords: ["neurodiversidade", "o que é", "iniciantes"],
     difficulty: "iniciante",
+    coverImage: "/images/neuro_mind_glow.png",
     featured: true,
   },
   {
@@ -103,6 +104,7 @@ export const allPosts: PostMetadata[] = [
     date: "2026-06-25",
     keywords: ["maturidade emocional", "inteligência emocional", "desenvolvimento"],
     difficulty: "intermediário",
+    coverImage: "/images/abstract_pastel.png",
     featured: true,
   },
   {
@@ -131,6 +133,7 @@ export const allPosts: PostMetadata[] = [
     date: "2026-06-18",
     keywords: ["vida adulta", "desafios", "oportunidades"],
     difficulty: "intermediário",
+    coverImage: "/images/abstract_pastel.png",
     featured: true,
   },
   {
@@ -197,6 +200,7 @@ export const allPosts: PostMetadata[] = [
     date: "2026-05-30",
     keywords: ["TDAH adultos", "sinais", "tratamento"],
     difficulty: "iniciante",
+    coverImage: "/images/neuro_mind_glow.png",
     featured: true,
   },
   {
@@ -272,6 +276,7 @@ export const allPosts: PostMetadata[] = [
     date: "2026-05-10",
     keywords: ["autismo adultos", "diagnóstico tardio", "aceitação"],
     difficulty: "iniciante",
+    coverImage: "/images/abstract_pastel.png",
     featured: true,
   },
   {
@@ -347,6 +352,7 @@ export const allPosts: PostMetadata[] = [
     date: "2026-04-20",
     keywords: ["diagnóstico tardio", "descoberta", "identidade"],
     difficulty: "intermediário",
+    coverImage: "/images/neuro_mind_glow.png",
     featured: true,
   },
   {
@@ -516,6 +522,7 @@ export const allPosts: PostMetadata[] = [
     date: "2026-03-05",
     keywords: ["trabalho", "direitos", "adaptações"],
     difficulty: "intermediário",
+    coverImage: "/images/abstract_pastel.png",
     featured: true,
   },
   {

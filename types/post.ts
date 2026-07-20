@@ -8,6 +8,7 @@ export interface PostMetadata {
   readingTime?: number;
   keywords?: string[];
   difficulty?: "iniciante" | "intermediário" | "avançado";
+  coverImage?: string;
   featured?: boolean;
 }
 

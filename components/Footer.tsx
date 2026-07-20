@@ -10,42 +10,42 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-neutral-100 dark:bg-dark-card border-t border-neutral-200 dark:border-neutral-800 mt-16">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+    <footer className="bg-white dark:bg-[#0f172a] border-t border-neutral-200 dark:border-slate-800 mt-16 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* About */}
-          <div>
-            <h3 className="font-bold text-lg text-neutral-900 dark:text-white mb-3">
-              Sobre
+          <div className="md:col-span-2">
+            <h3 className="font-bold text-xl text-neutral-900 dark:text-white mb-4 flex items-center gap-2">
+              <span className="text-2xl">🧠</span> Maturidade Neurodivergente
             </h3>
-            <p className="text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed">
-              Um espaço inclusivo dedicado a explorar maturidade neurodivergente com clareza, compaixão e acessibilidade.
+            <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed max-w-md">
+              Um espaço inclusivo dedicado a explorar maturidade neurodivergente com clareza, compaixão e acessibilidade. Crescendo fora dos padrões.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-lg text-neutral-900 dark:text-white mb-3">
+            <h3 className="font-bold text-sm uppercase tracking-wider text-neutral-900 dark:text-white mb-4">
               Links Rápidos
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-sm">
+                <Link href="/" className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                   Início
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-sm">
+                <Link href="/blog" className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-sm">
+                <Link href="/about" className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                   Sobre
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm">
+                <Link href="/contact" className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
                   Contato
                 </Link>
               </li>
@@ -54,8 +54,8 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h3 className="font-bold text-lg text-neutral-900 dark:text-white mb-3">
-              Redes Sociais
+            <h3 className="font-bold text-sm uppercase tracking-wider text-neutral-900 dark:text-white mb-4">
+              Conecte-se
             </h3>
             <div className="flex gap-4">
               {socialLinks.map((link) => (
@@ -65,7 +65,7 @@ export default function Footer() {
                   aria-label={link.name}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-2xl hover:opacity-70 transition-opacity focus:outline-none focus:ring-2 focus:ring-primary-500 rounded"
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-100 dark:bg-slate-800 text-xl hover:bg-primary-100 hover:text-primary-600 dark:hover:bg-primary-900/30 dark:hover:text-primary-400 transition-all focus:outline-none focus:ring-2 focus:ring-primary-500"
                   title={link.name}
                 >
                   {link.icon}
@@ -76,15 +76,15 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-neutral-300 dark:border-neutral-700 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <div className="border-t border-neutral-200 dark:border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">
             © {currentYear} Maturidade Neurodivergente. Todos os direitos reservados.
           </p>
           <div className="flex gap-6">
-            <Link href="/privacy" className="text-sm">
+            <Link href="/privacy" className="text-sm text-neutral-500 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
               Privacidade
             </Link>
-            <Link href="/terms" className="text-sm">
+            <Link href="/terms" className="text-sm text-neutral-500 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
               Termos
             </Link>
           </div>

@@ -6,16 +6,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: white;
-  color: #2d3748;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-body.dark {
-  background-color: #1a1a2e;
-  color: #e0e0e0;
-}
 
 /* Acessibilidade: Reduz animações para usuários com preferência */
 @media (prefers-reduced-motion: reduce) {
@@ -55,7 +45,7 @@ a:hover {
   text-decoration: underline;
 }
 
-body.dark a:hover {
+.dark a:hover {
   color: #8ba5ff;
 }
 
@@ -94,7 +84,7 @@ code {
   font-size: 0.875rem;
 }
 
-body.dark code {
+.dark code {
   background-color: #16213e;
   color: #e0e0e0;
 }
@@ -108,7 +98,7 @@ pre {
   margin: 1rem 0;
 }
 
-body.dark pre {
+.dark pre {
   background-color: #16213e;
   color: #e0e0e0;
 }
