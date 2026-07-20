@@ -21,9 +21,10 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-2xl font-black tracking-tighter text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg px-2 flex items-center gap-2"
+            className="group text-2xl font-black tracking-tighter text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg px-2 flex items-center gap-1"
           >
-            <span className="text-3xl">🧠</span> MN
+            <span className="text-primary-600 dark:text-primary-500 font-extrabold tracking-tight">M</span>
+            <span className="text-neutral-900 dark:text-white font-light tracking-widest uppercase text-sm mt-1">Neurodivergente</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -39,17 +40,8 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Right side - Search & Theme */}
+          {/* Right side - Theme & Mobile Menu */}
           <div className="flex items-center gap-2">
-            <Link
-              href="/search"
-              aria-label="Buscar"
-              className="text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-neutral-100 dark:hover:bg-slate-800/50 transition-all focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-full p-2.5 flex items-center justify-center"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-              </svg>
-            </Link>
             <div className="hover:bg-neutral-100 dark:hover:bg-slate-800/50 rounded-full transition-all">
               <ThemeToggle />
             </div>

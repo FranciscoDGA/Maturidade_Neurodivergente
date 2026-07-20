@@ -40,7 +40,7 @@ export default function RootLayout({
           <Header />
           <main
             id="main"
-            className="flex-1 w-full"
+            className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
           >
             {children}
           </main>

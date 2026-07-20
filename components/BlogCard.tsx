@@ -10,7 +10,7 @@ export default function BlogCard({ post }: { post: PostMetadata }) {
   });
 
   return (
-    <article className="group flex flex-col bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-neutral-200 dark:border-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
+    <article className="group flex flex-col bg-white dark:bg-slate-800 rounded-[5px] overflow-hidden border border-neutral-200 dark:border-slate-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full">
       {/* Cover Image Area */}
       <div className="relative w-full h-48 sm:h-56 overflow-hidden bg-neutral-100 dark:bg-slate-700">
         {post.coverImage ? (

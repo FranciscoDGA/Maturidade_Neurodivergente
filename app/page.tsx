@@ -18,7 +18,7 @@ export default function Home() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 font-sans">
+    <div className="py-10 font-sans">
       {/* Header Section */}
       <div className="flex flex-col md:flex-row justify-between items-end border-b-2 border-neutral-900 dark:border-white pb-6 mb-12">
         <div>
@@ -65,7 +65,7 @@ export default function Home() {
             </div>
           </div>
           <div className="lg:col-span-8 order-1 lg:order-2">
-            <Link href={`/blog/${heroPost.slug}`} className="block relative aspect-[16/9] overflow-hidden rounded-sm group">
+            <Link href={`/blog/${heroPost.slug}`} className="block relative aspect-[16/9] overflow-hidden rounded-[5px] group">
               {heroPost.coverImage ? (
                 <Image
                   src={heroPost.coverImage}
@@ -97,7 +97,7 @@ export default function Home() {
         <div className="lg:col-span-8 space-y-12">
           {breakingNews.map((post) => (
             <div key={post.slug} className="grid sm:grid-cols-2 gap-6 group">
-              <Link href={`/blog/${post.slug}`} className="block relative aspect-[4/3] sm:aspect-square overflow-hidden rounded-sm">
+              <Link href={`/blog/${post.slug}`} className="block relative aspect-[4/3] sm:aspect-square overflow-hidden rounded-[5px]">
                 {post.coverImage ? (
                   <Image
                     src={post.coverImage}
@@ -147,7 +147,7 @@ export default function Home() {
                     </h5>
                     <p className="text-xs text-neutral-500">• {formatDate(post.date)}</p>
                   </div>
-                  <Link href={`/blog/${post.slug}`} className="block relative w-20 h-20 shrink-0 rounded-sm overflow-hidden bg-neutral-100 dark:bg-neutral-800">
+                  <Link href={`/blog/${post.slug}`} className="block relative w-20 h-20 shrink-0 rounded-[5px] overflow-hidden bg-neutral-100 dark:bg-neutral-800">
                      {post.coverImage && (
                        <Image
                          src={post.coverImage}
@@ -174,7 +174,7 @@ export default function Home() {
                 { name: "Equipe Editorial", title: "Curadoria", followers: "15k" },
               ].map((author, i) => (
                 <div key={i} className="flex items-center gap-4">
-                  <div className="w-6 h-6 bg-neutral-900 dark:bg-white text-white dark:text-black rounded-sm flex items-center justify-center text-xs font-bold">
+                  <div className="w-6 h-6 bg-neutral-900 dark:bg-white text-white dark:text-black rounded-[5px] flex items-center justify-center text-xs font-bold">
                     {i + 1}
                   </div>
                   <div className="flex-1">
@@ -194,7 +194,7 @@ export default function Home() {
             </h4>
             <div className="grid grid-cols-2 gap-3">
               {['Instagram', 'TikTok', 'YouTube', 'Twitter'].map(social => (
-                <button key={social} className="flex items-center justify-between px-4 py-2 border border-neutral-200 dark:border-neutral-800 rounded-sm hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors">
+                <button key={social} className="flex items-center justify-between px-4 py-2 border border-neutral-200 dark:border-neutral-800 rounded-[5px] hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors">
                   <span className="text-sm font-bold text-neutral-900 dark:text-white">{social}</span>
                   <span className="text-xs text-neutral-500">+</span>
                 </button>
@@ -203,7 +203,7 @@ export default function Home() {
           </div>
 
           {/* Banner */}
-          <div className="bg-neutral-50 dark:bg-neutral-900 border border-dashed border-neutral-300 dark:border-neutral-700 p-8 text-center rounded-sm">
+          <div className="bg-neutral-50 dark:bg-neutral-900 border border-dashed border-neutral-300 dark:border-neutral-700 p-8 text-center rounded-[5px]">
             <p className="text-neutral-500 mb-4">Participe da Comunidade</p>
             <button className="bg-neutral-900 dark:bg-white text-white dark:text-black px-6 py-2 rounded-full font-bold text-sm">
               Inscreva-se

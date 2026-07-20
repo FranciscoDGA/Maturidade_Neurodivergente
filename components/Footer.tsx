@@ -15,9 +15,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* About */}
           <div className="md:col-span-2">
-            <h3 className="font-bold text-xl text-neutral-900 dark:text-white mb-4 flex items-center gap-2">
-              <span className="text-2xl">🧠</span> Maturidade Neurodivergente
-            </h3>
+            <div className="font-black tracking-tighter text-neutral-900 dark:text-white mb-4 flex items-center gap-1">
+              <span className="text-primary-600 dark:text-primary-500 font-extrabold tracking-tight">M</span>
+              <span className="text-neutral-900 dark:text-white font-light tracking-widest uppercase text-sm mt-1">Neurodivergente</span>
+            </div>
             <p className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed max-w-md">
               Um espaço inclusivo dedicado a explorar maturidade neurodivergente com clareza, compaixão e acessibilidade. Crescendo fora dos padrões.
             </p>
@@ -65,10 +66,10 @@ export default function Footer() {
                   aria-label={link.name}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-100 dark:bg-slate-800 text-xl hover:bg-primary-100 hover:text-primary-600 dark:hover:bg-primary-900/30 dark:hover:text-primary-400 transition-all focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-neutral-100 dark:bg-slate-800 text-sm font-semibold hover:bg-primary-100 hover:text-primary-600 dark:hover:bg-primary-900/30 dark:hover:text-primary-400 transition-all focus:outline-none focus:ring-2 focus:ring-primary-500"
                   title={link.name}
                 >
-                  {link.icon}
+                  {link.name.charAt(0)}
                 </a>
               ))}
             </div>

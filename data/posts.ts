@@ -21,7 +21,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-07-18",
     keywords: ["neurodivergente", "neurotípico", "diferenças"],
     difficulty: "iniciante",
-  },
+  coverImage: "/images/neuro_diversity_brain.png",
+    },
   {
     title: "TEA, TDAH, Dislexia: Os 7 Tipos de Neurodivergência",
     slug: "tipos-neurodivergencia",
@@ -30,7 +31,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-07-15",
     keywords: ["tipos de neurodivergência", "TEA", "TDAH", "dislexia"],
     difficulty: "iniciante",
-  },
+  coverImage: "/images/golden_kintsugi_brain.png",
+    },
   {
     title: "Neurodiversidade no Brasil: Dados, Desafios e Avanços",
     slug: "neurodiversidade-brasil",
@@ -39,7 +41,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-07-12",
     keywords: ["neurodiversidade Brasil", "estatísticas", "políticas públicas"],
     difficulty: "intermediário",
-  },
+  coverImage: "/images/serene_nature_mind.png",
+    },
   {
     title: "5 Mitos sobre Neurodiversidade que Você Precisa Parar de Acreditar",
     slug: "mitos-neurodiversidade",
@@ -48,7 +51,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-07-10",
     keywords: ["mitos neurodiversidade", "conceitos errados"],
     difficulty: "iniciante",
-  },
+  coverImage: "/images/geometric_balance.png",
+    },
   {
     title: "O Movimento da Neurodiversidade: História e Impacto",
     slug: "movimento-neurodiversidade",
@@ -57,7 +61,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-07-08",
     keywords: ["movimento neurodiversidade", "história", "ativismo"],
     difficulty: "intermediário",
-  },
+  coverImage: "/images/abstract_pastel.png",
+    },
   {
     title: "Neurodiversidade no Trabalho: Legislação e Direitos",
     slug: "neurodiversidade-trabalho-direitos",
@@ -66,7 +71,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-07-05",
     keywords: ["neurodiversidade trabalho", "lei de cotas", "direitos"],
     difficulty: "intermediário",
-  },
+  coverImage: "/images/surreal_architecture.png",
+    },
   {
     title: "Neuroplasticidade: O Cérebro Neurodivergente Consegue Mudar?",
     slug: "neuroplasticidade-neurodivergente",
@@ -75,7 +81,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-07-02",
     keywords: ["neuroplasticidade", "cérebro", "mudança"],
     difficulty: "avançado",
-  },
+  coverImage: "/images/arctic_fox.png",
+    },
   {
     title: "Neurodiversidade e Saúde Mental: A Conexão Importante",
     slug: "neurodiversidade-saude-mental",
@@ -84,7 +91,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-06-30",
     keywords: ["neurodiversidade", "saúde mental", "ansiedade"],
     difficulty: "intermediário",
-  },
+  coverImage: "/images/neuro_mind_glow.png",
+    },
   {
     title: "Interseccionalidade na Neurodiversidade: Quando Múltiplas Identidades se Cruzam",
     slug: "interseccionalidade-neurodiversidade",
@@ -93,7 +101,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-06-28",
     keywords: ["interseccionalidade", "identidades múltiplas", "inclusão"],
     difficulty: "avançado",
-  },
+  coverImage: "/images/abstract_pastel.png",
+    },
 
   // 🌱 MATURIDADE NEURODIVERGENTE (10 posts)
   {
@@ -220,7 +229,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-05-25",
     keywords: ["TDAH", "amadurecimento", "desenvolvimento"],
     difficulty: "intermediário",
-  },
+  coverImage: "/images/arctic_fox.png",
+    },
   {
     title: "TDAH e Tomada de Decisão: Dicas para Acertar Mais",
     slug: "tdah-tomada-decisao",
@@ -229,7 +239,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-05-22",
     keywords: ["TDAH", "tomada de decisão", "impulsividade"],
     difficulty: "intermediário",
-  },
+  coverImage: "/images/geometric_balance.png",
+    },
   {
     title: "Organização para TDAH: Métodos que Realmente Funcionam",
     slug: "organizacao-tdah",
@@ -238,7 +249,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-05-20",
     keywords: ["TDAH", "organização", "produtividade"],
     difficulty: "intermediário",
-  },
+  coverImage: "/images/golden_kintsugi_brain.png",
+    },
   {
     title: "Procrastinação no TDAH: Como Vencer Esta Batalha",
     slug: "procrastinacao-tdah",
@@ -247,7 +259,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-05-18",
     keywords: ["TDAH", "procrastinação", "gestão de tempo"],
     difficulty: "intermediário",
-  },
+  coverImage: "/images/neuro_mind_glow.png",
+    },
   {
     title: "Relacionamentos com TDAH: Como Manter a Estabilidade",
     slug: "relacionamentos-tdah",
@@ -256,7 +269,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-05-15",
     keywords: ["TDAH", "relacionamentos", "comunicação"],
     difficulty: "intermediário",
-  },
+  coverImage: "/images/serene_nature_mind.png",
+    },
   {
     title: "Carreira para Pessoas com TDAH: Profissões Ideais",
     slug: "carreira-tdah",
@@ -265,7 +279,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-05-12",
     keywords: ["TDAH", "carreira", "trabalho"],
     difficulty: "intermediário",
-  },
+  coverImage: "/images/surreal_architecture.png",
+    },
 
   // 🧩 AUTISMO (8 posts)
   {
@@ -287,7 +302,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-05-08",
     keywords: ["autismo", "maturidade emocional", "emoções"],
     difficulty: "intermediário",
-  },
+  coverImage: "/images/abstract_pastel.png",
+    },
   {
     title: "Autismo e Independência: Como Alcançar a Autonomia",
     slug: "autismo-independencia",
@@ -296,7 +312,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-05-05",
     keywords: ["autismo", "independência", "autonomia"],
     difficulty: "intermediário",
-  },
+  coverImage: "/images/geometric_balance.png",
+    },
   {
     title: "Amizades no Autismo: Como Construir Conexões Genuínas",
     slug: "amizades-autismo",
@@ -305,7 +322,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-05-02",
     keywords: ["autismo", "amizade", "relações sociais"],
     difficulty: "intermediário",
-  },
+  coverImage: "/images/golden_kintsugi_brain.png",
+    },
   {
     title: "Autismo no Mercado de Trabalho: Direitos e Oportunidades",
     slug: "autismo-trabalho",
@@ -314,7 +332,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-04-30",
     keywords: ["autismo", "trabalho", "inclusão"],
     difficulty: "intermediário",
-  },
+  coverImage: "/images/arctic_fox.png",
+    },
   {
     title: "Sensibilidade Emocional no Autismo: Como Gerenciar",
     slug: "sensibilidade-emocional-autismo",
@@ -323,7 +342,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-04-28",
     keywords: ["autismo", "sensibilidade emocional", "regulação"],
     difficulty: "intermediário",
-  },
+  coverImage: "/images/serene_nature_mind.png",
+    },
   {
     title: "Masking no Autismo: O Custo de Esconder Quem Você É",
     slug: "masking-autismo",
@@ -332,7 +352,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-04-25",
     keywords: ["autismo", "masking", "autenticidade"],
     difficulty: "intermediário",
-  },
+  coverImage: "/images/neuro_diversity_brain.png",
+    },
   {
     title: "Burnout Autista: Reconhecer e Prevenir o Colapso",
     slug: "burnout-autista",
@@ -341,7 +362,8 @@ export const allPosts: PostMetadata[] = [
     date: "2026-04-22",
     keywords: ["autismo", "burnout", "esgotamento"],
     difficulty: "intermediário",
-  },
+  coverImage: "/images/surreal_architecture.png",
+    },
 
   // 🔍 DIAGNÓSTICO TARDIO (6 posts)
   {
