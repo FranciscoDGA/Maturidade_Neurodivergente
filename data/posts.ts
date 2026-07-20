@@ -9,8 +9,8 @@ export const allPosts: PostMetadata[] = [
     category: "Neurodiversidade 101",
     date: "2026-07-20",
     keywords: ["neurodiversidade", "o que é", "iniciantes"],
+    coverImage: "/images/abstract_pastel.png",
     difficulty: "iniciante",
-    coverImage: "/images/neuro_mind_glow.png",
     featured: true,
   },
   {
@@ -20,9 +20,9 @@ export const allPosts: PostMetadata[] = [
     category: "Neurodiversidade 101",
     date: "2026-07-18",
     keywords: ["neurodivergente", "neurotípico", "diferenças"],
+    coverImage: "/images/arctic_fox.png",
     difficulty: "iniciante",
-  coverImage: "/images/neuro_diversity_brain.png",
-    },
+  },
   {
     title: "TEA, TDAH, Dislexia: Os 7 Tipos de Neurodivergência",
     slug: "tipos-neurodivergencia",
@@ -30,9 +30,9 @@ export const allPosts: PostMetadata[] = [
     category: "Neurodiversidade 101",
     date: "2026-07-15",
     keywords: ["tipos de neurodivergência", "TEA", "TDAH", "dislexia"],
+    coverImage: "/images/geometric_balance.png",
     difficulty: "iniciante",
-  coverImage: "/images/golden_kintsugi_brain.png",
-    },
+  },
   {
     title: "Neurodiversidade no Brasil: Dados, Desafios e Avanços",
     slug: "neurodiversidade-brasil",
@@ -40,9 +40,9 @@ export const allPosts: PostMetadata[] = [
     category: "Neurodiversidade 101",
     date: "2026-07-12",
     keywords: ["neurodiversidade Brasil", "estatísticas", "políticas públicas"],
+    coverImage: "/images/golden_kintsugi_brain.png",
     difficulty: "intermediário",
-  coverImage: "/images/serene_nature_mind.png",
-    },
+  },
   {
     title: "5 Mitos sobre Neurodiversidade que Você Precisa Parar de Acreditar",
     slug: "mitos-neurodiversidade",
@@ -50,9 +50,9 @@ export const allPosts: PostMetadata[] = [
     category: "Neurodiversidade 101",
     date: "2026-07-10",
     keywords: ["mitos neurodiversidade", "conceitos errados"],
+    coverImage: "/images/neuro_diversity_brain.png",
     difficulty: "iniciante",
-  coverImage: "/images/geometric_balance.png",
-    },
+  },
   {
     title: "O Movimento da Neurodiversidade: História e Impacto",
     slug: "movimento-neurodiversidade",
@@ -60,9 +60,9 @@ export const allPosts: PostMetadata[] = [
     category: "Neurodiversidade 101",
     date: "2026-07-08",
     keywords: ["movimento neurodiversidade", "história", "ativismo"],
+    coverImage: "/images/neuro_mind_glow.png",
     difficulty: "intermediário",
-  coverImage: "/images/abstract_pastel.png",
-    },
+  },
   {
     title: "Neurodiversidade no Trabalho: Legislação e Direitos",
     slug: "neurodiversidade-trabalho-direitos",
@@ -70,9 +70,9 @@ export const allPosts: PostMetadata[] = [
     category: "Neurodiversidade 101",
     date: "2026-07-05",
     keywords: ["neurodiversidade trabalho", "lei de cotas", "direitos"],
+    coverImage: "/images/serene_nature_mind.png",
     difficulty: "intermediário",
-  coverImage: "/images/surreal_architecture.png",
-    },
+  },
   {
     title: "Neuroplasticidade: O Cérebro Neurodivergente Consegue Mudar?",
     slug: "neuroplasticidade-neurodivergente",
@@ -80,9 +80,9 @@ export const allPosts: PostMetadata[] = [
     category: "Neurodiversidade 101",
     date: "2026-07-02",
     keywords: ["neuroplasticidade", "cérebro", "mudança"],
+    coverImage: "/images/surreal_architecture.png",
     difficulty: "avançado",
-  coverImage: "/images/arctic_fox.png",
-    },
+  },
   {
     title: "Neurodiversidade e Saúde Mental: A Conexão Importante",
     slug: "neurodiversidade-saude-mental",
@@ -90,9 +90,9 @@ export const allPosts: PostMetadata[] = [
     category: "Neurodiversidade 101",
     date: "2026-06-30",
     keywords: ["neurodiversidade", "saúde mental", "ansiedade"],
+    coverImage: "/images/abstract_pastel.png",
     difficulty: "intermediário",
-  coverImage: "/images/neuro_mind_glow.png",
-    },
+  },
   {
     title: "Interseccionalidade na Neurodiversidade: Quando Múltiplas Identidades se Cruzam",
     slug: "interseccionalidade-neurodiversidade",
@@ -100,9 +100,9 @@ export const allPosts: PostMetadata[] = [
     category: "Neurodiversidade 101",
     date: "2026-06-28",
     keywords: ["interseccionalidade", "identidades múltiplas", "inclusão"],
+    coverImage: "/images/arctic_fox.png",
     difficulty: "avançado",
-  coverImage: "/images/abstract_pastel.png",
-    },
+  },
 
   // 🌱 MATURIDADE NEURODIVERGENTE (10 posts)
   {
@@ -112,8 +112,8 @@ export const allPosts: PostMetadata[] = [
     category: "Maturidade Neurodivergente",
     date: "2026-06-25",
     keywords: ["maturidade emocional", "inteligência emocional", "desenvolvimento"],
+    coverImage: "/images/geometric_balance.png",
     difficulty: "intermediário",
-    coverImage: "/images/abstract_pastel.png",
     featured: true,
   },
   {
@@ -123,6 +123,7 @@ export const allPosts: PostMetadata[] = [
     category: "Maturidade Neurodivergente",
     date: "2026-06-22",
     keywords: ["amadurecimento", "neurodivergente", "desenvolvimento pessoal"],
+    coverImage: "/images/golden_kintsugi_brain.png",
     difficulty: "intermediário",
   },
   {
@@ -132,6 +133,7 @@ export const allPosts: PostMetadata[] = [
     category: "Maturidade Neurodivergente",
     date: "2026-06-20",
     keywords: ["desenvolvimento", "etapas", "desafios"],
+    coverImage: "/images/neuro_diversity_brain.png",
     difficulty: "intermediário",
   },
   {
@@ -141,8 +143,8 @@ export const allPosts: PostMetadata[] = [
     category: "Maturidade Neurodivergente",
     date: "2026-06-18",
     keywords: ["vida adulta", "desafios", "oportunidades"],
+    coverImage: "/images/neuro_mind_glow.png",
     difficulty: "intermediário",
-    coverImage: "/images/arctic_fox.png",
     featured: true,
   },
   {
@@ -152,6 +154,7 @@ export const allPosts: PostMetadata[] = [
     category: "Maturidade Neurodivergente",
     date: "2026-06-15",
     keywords: ["crescimento pessoal", "desenvolvimento", "estratégias"],
+    coverImage: "/images/serene_nature_mind.png",
     difficulty: "intermediário",
   },
   {
@@ -161,6 +164,7 @@ export const allPosts: PostMetadata[] = [
     category: "Maturidade Neurodivergente",
     date: "2026-06-12",
     keywords: ["autoconhecimento", "self-awareness", "identidade"],
+    coverImage: "/images/surreal_architecture.png",
     difficulty: "intermediário",
   },
   {
@@ -170,6 +174,7 @@ export const allPosts: PostMetadata[] = [
     category: "Maturidade Neurodivergente",
     date: "2026-06-10",
     keywords: ["autossabotagem", "crenças limitantes", "superação"],
+    coverImage: "/images/abstract_pastel.png",
     difficulty: "intermediário",
   },
   {
@@ -179,6 +184,7 @@ export const allPosts: PostMetadata[] = [
     category: "Maturidade Neurodivergente",
     date: "2026-06-08",
     keywords: ["resiliência", "lidar com desafios", "força mental"],
+    coverImage: "/images/arctic_fox.png",
     difficulty: "intermediário",
   },
   {
@@ -188,6 +194,7 @@ export const allPosts: PostMetadata[] = [
     category: "Maturidade Neurodivergente",
     date: "2026-06-05",
     keywords: ["autocompaixão", "autocuidado", "amor próprio"],
+    coverImage: "/images/geometric_balance.png",
     difficulty: "intermediário",
   },
   {
@@ -197,6 +204,7 @@ export const allPosts: PostMetadata[] = [
     category: "Maturidade Neurodivergente",
     date: "2026-06-02",
     keywords: ["valores pessoais", "autenticidade", "propósito"],
+    coverImage: "/images/golden_kintsugi_brain.png",
     difficulty: "intermediário",
   },
 
@@ -208,8 +216,8 @@ export const allPosts: PostMetadata[] = [
     category: "TDAH",
     date: "2026-05-30",
     keywords: ["TDAH adultos", "sinais", "tratamento"],
+    coverImage: "/images/neuro_diversity_brain.png",
     difficulty: "iniciante",
-    coverImage: "/images/surreal_architecture.png",
     featured: true,
   },
   {
@@ -219,6 +227,7 @@ export const allPosts: PostMetadata[] = [
     category: "TDAH",
     date: "2026-05-28",
     keywords: ["TDAH", "maturidade emocional", "regulação emocional"],
+    coverImage: "/images/neuro_mind_glow.png",
     difficulty: "intermediário",
   },
   {
@@ -228,9 +237,9 @@ export const allPosts: PostMetadata[] = [
     category: "TDAH",
     date: "2026-05-25",
     keywords: ["TDAH", "amadurecimento", "desenvolvimento"],
+    coverImage: "/images/serene_nature_mind.png",
     difficulty: "intermediário",
-  coverImage: "/images/arctic_fox.png",
-    },
+  },
   {
     title: "TDAH e Tomada de Decisão: Dicas para Acertar Mais",
     slug: "tdah-tomada-decisao",
@@ -238,9 +247,9 @@ export const allPosts: PostMetadata[] = [
     category: "TDAH",
     date: "2026-05-22",
     keywords: ["TDAH", "tomada de decisão", "impulsividade"],
+    coverImage: "/images/surreal_architecture.png",
     difficulty: "intermediário",
-  coverImage: "/images/geometric_balance.png",
-    },
+  },
   {
     title: "Organização para TDAH: Métodos que Realmente Funcionam",
     slug: "organizacao-tdah",
@@ -248,9 +257,9 @@ export const allPosts: PostMetadata[] = [
     category: "TDAH",
     date: "2026-05-20",
     keywords: ["TDAH", "organização", "produtividade"],
+    coverImage: "/images/abstract_pastel.png",
     difficulty: "intermediário",
-  coverImage: "/images/golden_kintsugi_brain.png",
-    },
+  },
   {
     title: "Procrastinação no TDAH: Como Vencer Esta Batalha",
     slug: "procrastinacao-tdah",
@@ -258,9 +267,9 @@ export const allPosts: PostMetadata[] = [
     category: "TDAH",
     date: "2026-05-18",
     keywords: ["TDAH", "procrastinação", "gestão de tempo"],
+    coverImage: "/images/arctic_fox.png",
     difficulty: "intermediário",
-  coverImage: "/images/neuro_mind_glow.png",
-    },
+  },
   {
     title: "Relacionamentos com TDAH: Como Manter a Estabilidade",
     slug: "relacionamentos-tdah",
@@ -268,9 +277,9 @@ export const allPosts: PostMetadata[] = [
     category: "TDAH",
     date: "2026-05-15",
     keywords: ["TDAH", "relacionamentos", "comunicação"],
+    coverImage: "/images/geometric_balance.png",
     difficulty: "intermediário",
-  coverImage: "/images/serene_nature_mind.png",
-    },
+  },
   {
     title: "Carreira para Pessoas com TDAH: Profissões Ideais",
     slug: "carreira-tdah",
@@ -278,9 +287,9 @@ export const allPosts: PostMetadata[] = [
     category: "TDAH",
     date: "2026-05-12",
     keywords: ["TDAH", "carreira", "trabalho"],
+    coverImage: "/images/golden_kintsugi_brain.png",
     difficulty: "intermediário",
-  coverImage: "/images/surreal_architecture.png",
-    },
+  },
 
   // 🧩 AUTISMO (8 posts)
   {
@@ -290,8 +299,8 @@ export const allPosts: PostMetadata[] = [
     category: "Autismo",
     date: "2026-05-10",
     keywords: ["autismo adultos", "diagnóstico tardio", "aceitação"],
+    coverImage: "/images/neuro_diversity_brain.png",
     difficulty: "iniciante",
-    coverImage: "/images/abstract_pastel.png",
     featured: true,
   },
   {
@@ -301,9 +310,9 @@ export const allPosts: PostMetadata[] = [
     category: "Autismo",
     date: "2026-05-08",
     keywords: ["autismo", "maturidade emocional", "emoções"],
+    coverImage: "/images/neuro_mind_glow.png",
     difficulty: "intermediário",
-  coverImage: "/images/abstract_pastel.png",
-    },
+  },
   {
     title: "Autismo e Independência: Como Alcançar a Autonomia",
     slug: "autismo-independencia",
@@ -311,9 +320,9 @@ export const allPosts: PostMetadata[] = [
     category: "Autismo",
     date: "2026-05-05",
     keywords: ["autismo", "independência", "autonomia"],
+    coverImage: "/images/serene_nature_mind.png",
     difficulty: "intermediário",
-  coverImage: "/images/geometric_balance.png",
-    },
+  },
   {
     title: "Amizades no Autismo: Como Construir Conexões Genuínas",
     slug: "amizades-autismo",
@@ -321,9 +330,9 @@ export const allPosts: PostMetadata[] = [
     category: "Autismo",
     date: "2026-05-02",
     keywords: ["autismo", "amizade", "relações sociais"],
+    coverImage: "/images/surreal_architecture.png",
     difficulty: "intermediário",
-  coverImage: "/images/golden_kintsugi_brain.png",
-    },
+  },
   {
     title: "Autismo no Mercado de Trabalho: Direitos e Oportunidades",
     slug: "autismo-trabalho",
@@ -331,9 +340,9 @@ export const allPosts: PostMetadata[] = [
     category: "Autismo",
     date: "2026-04-30",
     keywords: ["autismo", "trabalho", "inclusão"],
+    coverImage: "/images/abstract_pastel.png",
     difficulty: "intermediário",
-  coverImage: "/images/arctic_fox.png",
-    },
+  },
   {
     title: "Sensibilidade Emocional no Autismo: Como Gerenciar",
     slug: "sensibilidade-emocional-autismo",
@@ -341,9 +350,9 @@ export const allPosts: PostMetadata[] = [
     category: "Autismo",
     date: "2026-04-28",
     keywords: ["autismo", "sensibilidade emocional", "regulação"],
+    coverImage: "/images/arctic_fox.png",
     difficulty: "intermediário",
-  coverImage: "/images/serene_nature_mind.png",
-    },
+  },
   {
     title: "Masking no Autismo: O Custo de Esconder Quem Você É",
     slug: "masking-autismo",
@@ -351,9 +360,9 @@ export const allPosts: PostMetadata[] = [
     category: "Autismo",
     date: "2026-04-25",
     keywords: ["autismo", "masking", "autenticidade"],
+    coverImage: "/images/geometric_balance.png",
     difficulty: "intermediário",
-  coverImage: "/images/neuro_diversity_brain.png",
-    },
+  },
   {
     title: "Burnout Autista: Reconhecer e Prevenir o Colapso",
     slug: "burnout-autista",
@@ -361,9 +370,9 @@ export const allPosts: PostMetadata[] = [
     category: "Autismo",
     date: "2026-04-22",
     keywords: ["autismo", "burnout", "esgotamento"],
+    coverImage: "/images/golden_kintsugi_brain.png",
     difficulty: "intermediário",
-  coverImage: "/images/surreal_architecture.png",
-    },
+  },
 
   // 🔍 DIAGNÓSTICO TARDIO (6 posts)
   {
@@ -373,8 +382,8 @@ export const allPosts: PostMetadata[] = [
     category: "Diagnóstico Tardio",
     date: "2026-04-20",
     keywords: ["diagnóstico tardio", "descoberta", "identidade"],
+    coverImage: "/images/neuro_diversity_brain.png",
     difficulty: "intermediário",
-    coverImage: "/images/neuro_mind_glow.png",
     featured: true,
   },
   {
@@ -384,6 +393,7 @@ export const allPosts: PostMetadata[] = [
     category: "Diagnóstico Tardio",
     date: "2026-04-18",
     keywords: ["teste", "sinais", "autodiagnóstico"],
+    coverImage: "/images/neuro_mind_glow.png",
     difficulty: "iniciante",
   },
   {
@@ -393,6 +403,7 @@ export const allPosts: PostMetadata[] = [
     category: "Diagnóstico Tardio",
     date: "2026-04-15",
     keywords: ["sinais", "neurodivergência", "adultos"],
+    coverImage: "/images/serene_nature_mind.png",
     difficulty: "iniciante",
   },
   {
@@ -402,6 +413,7 @@ export const allPosts: PostMetadata[] = [
     category: "Diagnóstico Tardio",
     date: "2026-04-12",
     keywords: ["diagnóstico TDAH", "processo", "profissionais"],
+    coverImage: "/images/surreal_architecture.png",
     difficulty: "intermediário",
   },
   {
@@ -411,6 +423,7 @@ export const allPosts: PostMetadata[] = [
     category: "Diagnóstico Tardio",
     date: "2026-04-10",
     keywords: ["diagnóstico autismo", "adultos", "processo"],
+    coverImage: "/images/abstract_pastel.png",
     difficulty: "intermediário",
   },
   {
@@ -420,6 +433,7 @@ export const allPosts: PostMetadata[] = [
     category: "Diagnóstico Tardio",
     date: "2026-04-08",
     keywords: ["não diagnosticado", "impacto", "acesso"],
+    coverImage: "/images/arctic_fox.png",
     difficulty: "intermediário",
   },
 
@@ -431,6 +445,7 @@ export const allPosts: PostMetadata[] = [
     category: "Autoconhecimento",
     date: "2026-04-05",
     keywords: ["autoconhecimento", "ferramentas", "autodescoberta"],
+    coverImage: "/images/geometric_balance.png",
     difficulty: "intermediário",
   },
   {
@@ -440,6 +455,7 @@ export const allPosts: PostMetadata[] = [
     category: "Autoconhecimento",
     date: "2026-04-02",
     keywords: ["autoestima", "aceitação", "amor próprio"],
+    coverImage: "/images/golden_kintsugi_brain.png",
     difficulty: "intermediário",
   },
   {
@@ -449,6 +465,7 @@ export const allPosts: PostMetadata[] = [
     category: "Autoconhecimento",
     date: "2026-03-30",
     keywords: ["identidade", "narrativa pessoal", "integração"],
+    coverImage: "/images/neuro_diversity_brain.png",
     difficulty: "intermediário",
   },
   {
@@ -458,6 +475,7 @@ export const allPosts: PostMetadata[] = [
     category: "Autoconhecimento",
     date: "2026-03-28",
     keywords: ["journaling", "escrita", "reflexão"],
+    coverImage: "/images/neuro_mind_glow.png",
     difficulty: "intermediário",
   },
   {
@@ -467,6 +485,7 @@ export const allPosts: PostMetadata[] = [
     category: "Autoconhecimento",
     date: "2026-03-25",
     keywords: ["meditação", "mindfulness", "técnicas adaptadas"],
+    coverImage: "/images/serene_nature_mind.png",
     difficulty: "intermediário",
   },
   {
@@ -476,6 +495,7 @@ export const allPosts: PostMetadata[] = [
     category: "Autoconhecimento",
     date: "2026-03-22",
     keywords: ["criatividade", "talento", "expressão"],
+    coverImage: "/images/surreal_architecture.png",
     difficulty: "intermediário",
   },
 
@@ -487,6 +507,7 @@ export const allPosts: PostMetadata[] = [
     category: "Relações",
     date: "2026-03-20",
     keywords: ["relacionamentos", "amor", "casamento"],
+    coverImage: "/images/abstract_pastel.png",
     difficulty: "intermediário",
   },
   {
@@ -496,6 +517,7 @@ export const allPosts: PostMetadata[] = [
     category: "Relações",
     date: "2026-03-18",
     keywords: ["amizades", "relacionamentos", "conexões"],
+    coverImage: "/images/arctic_fox.png",
     difficulty: "intermediário",
   },
   {
@@ -505,6 +527,7 @@ export const allPosts: PostMetadata[] = [
     category: "Relações",
     date: "2026-03-15",
     keywords: ["família", "comunicação", "aceitação"],
+    coverImage: "/images/geometric_balance.png",
     difficulty: "intermediário",
   },
   {
@@ -514,6 +537,7 @@ export const allPosts: PostMetadata[] = [
     category: "Relações",
     date: "2026-03-12",
     keywords: ["namoro", "relacionamento", "romance"],
+    coverImage: "/images/golden_kintsugi_brain.png",
     difficulty: "intermediário",
   },
   {
@@ -523,6 +547,7 @@ export const allPosts: PostMetadata[] = [
     category: "Relações",
     date: "2026-03-10",
     keywords: ["comunicação", "expressão", "entendimento"],
+    coverImage: "/images/neuro_diversity_brain.png",
     difficulty: "intermediário",
   },
   {
@@ -532,6 +557,7 @@ export const allPosts: PostMetadata[] = [
     category: "Relações",
     date: "2026-03-08",
     keywords: ["limites", "assertividade", "relacionamentos"],
+    coverImage: "/images/neuro_mind_glow.png",
     difficulty: "intermediário",
   },
 
@@ -543,8 +569,8 @@ export const allPosts: PostMetadata[] = [
     category: "Carreira",
     date: "2026-03-05",
     keywords: ["trabalho", "direitos", "adaptações"],
+    coverImage: "/images/serene_nature_mind.png",
     difficulty: "intermediário",
-    coverImage: "/images/abstract_pastel.png",
     featured: true,
   },
   {
@@ -554,6 +580,7 @@ export const allPosts: PostMetadata[] = [
     category: "Carreira",
     date: "2026-03-02",
     keywords: ["profissões", "carreira", "trabalho"],
+    coverImage: "/images/surreal_architecture.png",
     difficulty: "intermediário",
   },
   {
@@ -563,6 +590,7 @@ export const allPosts: PostMetadata[] = [
     category: "Carreira",
     date: "2026-02-28",
     keywords: ["produtividade", "trabalho", "eficiência"],
+    coverImage: "/images/abstract_pastel.png",
     difficulty: "intermediário",
   },
   {
@@ -572,6 +600,7 @@ export const allPosts: PostMetadata[] = [
     category: "Carreira",
     date: "2026-02-25",
     keywords: ["burnout", "trabalho", "esgotamento"],
+    coverImage: "/images/arctic_fox.png",
     difficulty: "intermediário",
   },
   {
@@ -581,6 +610,7 @@ export const allPosts: PostMetadata[] = [
     category: "Carreira",
     date: "2026-02-22",
     keywords: ["home office", "trabalho remoto", "organização"],
+    coverImage: "/images/geometric_balance.png",
     difficulty: "intermediário",
   },
   {
@@ -590,6 +620,7 @@ export const allPosts: PostMetadata[] = [
     category: "Carreira",
     date: "2026-02-20",
     keywords: ["entrevista", "emprego", "apresentação"],
+    coverImage: "/images/golden_kintsugi_brain.png",
     difficulty: "intermediário",
   },
 
@@ -601,6 +632,7 @@ export const allPosts: PostMetadata[] = [
     category: "Saúde Mental",
     date: "2026-02-18",
     keywords: ["ansiedade", "saúde mental", "manejo"],
+    coverImage: "/images/neuro_diversity_brain.png",
     difficulty: "intermediário",
   },
   {
@@ -610,6 +642,7 @@ export const allPosts: PostMetadata[] = [
     category: "Saúde Mental",
     date: "2026-02-15",
     keywords: ["depressão", "saúde mental", "ajuda"],
+    coverImage: "/images/neuro_mind_glow.png",
     difficulty: "intermediário",
   },
   {
@@ -619,6 +652,7 @@ export const allPosts: PostMetadata[] = [
     category: "Saúde Mental",
     date: "2026-02-12",
     keywords: ["terapia", "saúde mental", "tratamento"],
+    coverImage: "/images/serene_nature_mind.png",
     difficulty: "intermediário",
   },
   {
@@ -628,6 +662,7 @@ export const allPosts: PostMetadata[] = [
     category: "Saúde Mental",
     date: "2026-02-10",
     keywords: ["autocompaixão", "saúde mental", "bem-estar"],
+    coverImage: "/images/surreal_architecture.png",
     difficulty: "intermediário",
   },
   {
@@ -637,6 +672,7 @@ export const allPosts: PostMetadata[] = [
     category: "Saúde Mental",
     date: "2026-02-08",
     keywords: ["rotina", "estrutura", "organização"],
+    coverImage: "/images/abstract_pastel.png",
     difficulty: "intermediário",
   },
   {
@@ -646,6 +682,7 @@ export const allPosts: PostMetadata[] = [
     category: "Saúde Mental",
     date: "2026-02-05",
     keywords: ["sono", "insônia", "descanso"],
+    coverImage: "/images/arctic_fox.png",
     difficulty: "intermediário",
   },
 
@@ -657,6 +694,7 @@ export const allPosts: PostMetadata[] = [
     category: "Recursos",
     date: "2026-02-02",
     keywords: ["ferramentas", "aplicativos", "recursos"],
+    coverImage: "/images/geometric_balance.png",
     difficulty: "iniciante",
   },
   {
@@ -666,6 +704,7 @@ export const allPosts: PostMetadata[] = [
     category: "Recursos",
     date: "2026-01-30",
     keywords: ["livros", "leitura", "recomendações"],
+    coverImage: "/images/golden_kintsugi_brain.png",
     difficulty: "iniciante",
   },
   {
@@ -675,6 +714,7 @@ export const allPosts: PostMetadata[] = [
     category: "Recursos",
     date: "2026-01-28",
     keywords: ["apps", "TDAH", "produtividade"],
+    coverImage: "/images/neuro_diversity_brain.png",
     difficulty: "iniciante",
   },
   {
@@ -684,6 +724,7 @@ export const allPosts: PostMetadata[] = [
     category: "Recursos",
     date: "2026-01-25",
     keywords: ["comunidades", "suporte", "conexão"],
+    coverImage: "/images/neuro_mind_glow.png",
     difficulty: "iniciante",
   },
   {
@@ -693,6 +734,7 @@ export const allPosts: PostMetadata[] = [
     category: "Recursos",
     date: "2026-01-22",
     keywords: ["cursos", "educação", "aprendizado"],
+    coverImage: "/images/serene_nature_mind.png",
     difficulty: "iniciante",
   },
 ];

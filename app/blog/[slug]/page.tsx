@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import BlogCard from "@/components/BlogCard";
 import { getPostBySlug, getAllPosts } from "@/lib/posts";
 import { allPosts as allPostsMetadata } from "@/data/posts";
@@ -26,6 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
+  const metaPost = allPostsMetadata.find((p) => p.slug === slug);
 
   if (!post) {
     notFound();
@@ -40,6 +42,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       excerpt: p.excerpt,
       category: p.category,
       date: p.date,
+      coverImage: p.coverImage,
     }));
 
   const formattedDate = new Date(post.date).toLocaleDateString("pt-BR", {
@@ -71,6 +74,18 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <span>Por {post.author}</span>
           </div>
         </header>
+
+        {metaPost?.coverImage && (
+          <div className="relative w-full aspect-[16/9] mb-12 rounded-[5px] overflow-hidden">
+            <Image
+              src={metaPost.coverImage}
+              alt={post.title}
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        )}
 
         {/* Article Content */}
         <div className="prose prose-invert dark:prose-invert max-w-none mb-12 text-neutral-800 dark:text-neutral-200">
