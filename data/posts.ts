@@ -133,7 +133,7 @@ export const allPosts: PostMetadata[] = [
     date: "2026-06-18",
     keywords: ["vida adulta", "desafios", "oportunidades"],
     difficulty: "intermediário",
-    coverImage: "/images/abstract_pastel.png",
+    coverImage: "/images/arctic_fox.png",
     featured: true,
   },
   {
@@ -200,7 +200,7 @@ export const allPosts: PostMetadata[] = [
     date: "2026-05-30",
     keywords: ["TDAH adultos", "sinais", "tratamento"],
     difficulty: "iniciante",
-    coverImage: "/images/neuro_mind_glow.png",
+    coverImage: "/images/surreal_architecture.png",
     featured: true,
   },
   {
