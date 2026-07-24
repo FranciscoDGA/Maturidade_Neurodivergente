@@ -9,6 +9,7 @@ import FavoriteButton from "@/components/FavoriteButton";
 import AudioReader from "@/components/AudioReader";
 import Comments from "@/components/Comments";
 import Newsletter from "@/components/Newsletter";
+import CommunityCTA from "@/components/CommunityCTA";
 import { generateBlogPostSchema } from "@/lib/seo";
 
 export async function generateStaticParams() {
@@ -162,6 +163,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </Link>
         </div>
 
+        <CommunityCTA />
         <Newsletter />
         <Comments />
       </article>
