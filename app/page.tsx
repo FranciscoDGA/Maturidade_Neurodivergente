@@ -316,25 +316,25 @@ export default function Home() {
 
       {/* --- STATS SECTION --- */}
       <div className="mt-32">
-        <div className="bg-gradient-to-br from-primary-900 to-primary-700 rounded-3xl p-10 md:p-16 text-white relative overflow-hidden">
+        <div className="bg-neutral-900 dark:bg-neutral-800 rounded-3xl p-10 md:p-16 text-white relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent-500/10 rounded-full blur-3xl" />
           <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl md:text-4xl font-display font-black mb-2">11+</div>
-              <div className="text-sm text-white/70">Artigos Publicados</div>
+              <div className="text-sm text-neutral-400">Artigos Publicados</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-display font-black mb-2">7</div>
-              <div className="text-sm text-white/70">Categorias</div>
+              <div className="text-sm text-neutral-400">Categorias</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-display font-black mb-2">100%</div>
-              <div className="text-sm text-white/70">Acessível</div>
+              <div className="text-sm text-neutral-400">Acessível</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-display font-black mb-2">0</div>
-              <div className="text-sm text-white/70">Cobranças</div>
+              <div className="text-sm text-neutral-400">Cobranças</div>
             </div>
           </div>
         </div>
