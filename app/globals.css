@@ -6,7 +6,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 /* Acessibilidade: Reduz animações para usuários com preferência */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -33,6 +32,26 @@ html {
   top: 0;
 }
 
+/* Artigo - alinhamento consistente */
+.prose {
+  text-align: left !important;
+}
+
+.prose p,
+.prose li,
+.prose ul,
+.prose ol,
+.prose blockquote,
+.prose table,
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  text-align: left !important;
+}
+
 /* Links */
 a {
   color: #4a6bff;
@@ -49,30 +68,11 @@ a:hover {
   color: #8ba5ff;
 }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
+/* Headings - respeitar alinhamento do prose */
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
   font-family: var(--font-outfit), sans-serif;
   font-weight: bold;
   letter-spacing: -0.025em;
-}
-
-h1 {
-  font-size: 2.5rem;
-  line-height: 1;
-}
-
-h2 {
-  font-size: 1.875rem;
-  line-height: 1.333;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-  line-height: 1.333;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
 }
 
 /* Code blocks */

@@ -146,7 +146,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         <AudioReader contentId="article-content" />
 
         {/* Article Content */}
-        <div id="article-content" className="prose prose-invert dark:prose-invert max-w-none mb-12 text-neutral-800 dark:text-neutral-200">
+        <div id="article-content" className="prose prose-lg prose-neutral dark:prose-invert max-w-none mb-12">
           <div className="leading-relaxed space-y-6">
             <MDXRemote source={post.content} />
           </div>
