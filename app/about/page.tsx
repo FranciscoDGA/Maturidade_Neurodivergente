@@ -22,9 +22,9 @@ export default function About() {
   const featuredPosts = getFeaturedPosts();
 
   return (
-    <div className="py-12">
+    <div className="py-8">
       {/* Hero */}
-      <div className="text-center mb-16 space-y-6">
+      <div className="text-center mb-12 space-y-4">
         <div className="inline-block px-4 py-1.5 rounded-full border border-primary-500/30 bg-primary-500/10 text-primary-600 dark:text-primary-400 text-sm font-bold tracking-wide backdrop-blur-md">
           Quem Somos
         </div>
@@ -37,14 +37,14 @@ export default function About() {
       </div>
 
       {/* Mission Statement */}
-      <div className="bg-gradient-to-br from-primary-900 to-primary-700 rounded-3xl p-10 md:p-16 text-white mb-16 relative overflow-hidden">
+      <div className="bg-gradient-to-br from-primary-900 to-primary-700 rounded-3xl p-8 md:p-12 text-white mb-16 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent-500/10 rounded-full blur-3xl" />
         <div className="relative z-10 text-center">
-          <h2 className="text-3xl md:text-5xl font-display font-black mb-6 leading-tight">
+          <h2 className="text-2xl md:text-4xl font-display font-black mb-4 leading-tight">
             Nossa Missão
           </h2>
-          <p className="text-white/90 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-10">
+          <p className="text-white/90 text-base md:text-lg max-w-3xl mx-auto leading-relaxed mb-8">
             Criar um espaço inclusivo, acessível e compassivo onde pessoas neurodivergentes possam entender sua própria neurodivergência de forma não patológica, explorar maturidade emocional e construir uma vida que respeite seus ritmos únicos.
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
@@ -66,9 +66,9 @@ export default function About() {
       </div>
 
       {/* Values */}
-      <div className="mb-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 dark:text-white mb-4">
+      <div className="mb-12">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 dark:text-white mb-3">
             Nossos Valores
           </h2>
           <p className="text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto">
@@ -123,9 +123,9 @@ export default function About() {
       </div>
 
       {/* What You'll Find */}
-      <div className="mb-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 dark:text-white mb-4">
+      <div className="mb-12">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 dark:text-white mb-3">
             O Que Você Encontrará Aqui
           </h2>
           <p className="text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto">
@@ -187,8 +187,8 @@ export default function About() {
       </div>
 
       {/* Story */}
-      <div className="mb-16">
-        <div className="bg-gradient-to-br from-neutral-900 to-black dark:from-[#0f111a] dark:to-[#050608] rounded-3xl p-10 md:p-16 text-center relative overflow-hidden shadow-2xl">
+      <div className="mb-12">
+        <div className="bg-gradient-to-br from-neutral-900 to-black dark:from-[#0f111a] dark:to-[#050608] rounded-3xl p-8 md:p-12 text-center relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40rem] h-[20rem] bg-accent-500/20 blur-[100px] rounded-[100%] pointer-events-none"></div>
 
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6 relative z-10">
@@ -221,8 +221,8 @@ export default function About() {
       </div>
 
       {/* Stats */}
-      <div className="mb-16">
-        <div className="bg-white dark:bg-dark-card border border-neutral-200 dark:border-dark-border rounded-3xl p-10 md:p-16">
+      <div className="mb-12">
+        <div className="bg-white dark:bg-dark-card border border-neutral-200 dark:border-dark-border rounded-3xl p-8 md:p-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl md:text-4xl font-display font-black text-neutral-900 dark:text-white mb-2">11+</div>
