@@ -238,13 +238,12 @@ export default function Home() {
             </h4>
             <div className="flex flex-wrap gap-2">
               {["TDAH", "Autismo", "Diagnóstico", "Maturidade", "Organização", "Autoconhecimento", "Relacionamentos", "Saúde Mental"].map((tag) => (
-                <Link
+                <span
                   key={tag}
-                  href={`/search?q=${encodeURIComponent(tag)}`}
-                  className="px-3 py-1.5 text-xs font-medium rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-700 dark:hover:text-primary-400 transition-colors"
+                  className="px-3 py-1.5 text-xs font-medium rounded-full bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
                 >
                   {tag}
-                </Link>
+                </span>
               ))}
             </div>
           </div>
