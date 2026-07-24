@@ -4,6 +4,12 @@ import BlogCard from "@/components/BlogCard";
 import { getPostBySlug, getAllPosts } from "@/lib/posts";
 import { allPosts as allPostsMetadata } from "@/data/posts";
 import { notFound } from "next/navigation";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import FavoriteButton from "@/components/FavoriteButton";
+import AudioReader from "@/components/AudioReader";
+import Comments from "@/components/Comments";
+import Newsletter from "@/components/Newsletter";
+import { generateBlogPostSchema } from "@/lib/seo";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -15,12 +21,43 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
+  const metaPost = allPostsMetadata.find((p) => p.slug === slug);
 
   if (!post) return {};
+
+  const url = `https://maturidadeneurodivergente.com.br/blog/${slug}`;
+  const ogImage = metaPost?.coverImage || "/images/og-default.png";
 
   return {
     title: post.title,
     description: post.excerpt,
+    keywords: metaPost?.keywords,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
+    openGraph: {
+      type: "article",
+      locale: "pt_BR",
+      url,
+      title: post.title,
+      description: post.excerpt,
+      publishedTime: post.date,
+      authors: [post.author || "Maturidade Neurodivergente"],
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [ogImage],
+    },
   };
 }
 
@@ -53,6 +90,22 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
   return (
     <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateBlogPostSchema({
+              title: post.title,
+              excerpt: post.excerpt,
+              date: post.date,
+              author: post.author,
+              keywords: metaPost?.keywords,
+            })
+          ),
+        }}
+      />
+
       {/* Article Header */}
       <article className="max-w-content mx-auto mb-16">
         <header className="mb-8">
@@ -72,6 +125,9 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <span>{formattedDate}</span>
             <span>•</span>
             <span>Por {post.author}</span>
+            <div className="ml-auto bg-white/50 dark:bg-black/20 rounded-full">
+              <FavoriteButton slug={post.slug} />
+            </div>
           </div>
         </header>
 
@@ -87,16 +143,17 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </div>
         )}
 
+        <AudioReader contentId="article-content" />
+
         {/* Article Content */}
-        <div className="prose prose-invert dark:prose-invert max-w-none mb-12 text-neutral-800 dark:text-neutral-200">
-          <div
-            className="leading-relaxed space-y-6"
-            dangerouslySetInnerHTML={{ __html: formatMarkdown(post.content) }}
-          />
+        <div id="article-content" className="prose prose-invert dark:prose-invert max-w-none mb-12 text-neutral-800 dark:text-neutral-200">
+          <div className="leading-relaxed space-y-6">
+            <MDXRemote source={post.content} />
+          </div>
         </div>
 
         {/* Navigation */}
-        <div className="border-t border-neutral-200 dark:border-neutral-700 pt-8 flex gap-4 justify-between">
+        <div className="border-t border-neutral-200 dark:border-neutral-700 pt-8 mt-12 flex gap-4 justify-between">
           <Link
             href="/blog"
             className="text-primary-600 dark:text-primary-400 font-semibold hover:text-primary-700"
@@ -104,6 +161,9 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             ← Voltar ao Blog
           </Link>
         </div>
+
+        <Newsletter />
+        <Comments />
       </article>
 
       {/* Related Posts */}
@@ -123,35 +183,3 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   );
 }
 
-function formatMarkdown(markdown: string): string {
-  let html = markdown
-    .split("\n")
-    .map((line) => {
-      if (!line.trim()) return "<br/>";
-
-      if (line.startsWith("### ")) {
-        return `<h3>${line.replace(/^### /, "")}</h3>`;
-      }
-      if (line.startsWith("## ")) {
-        return `<h2>${line.replace(/^## /, "")}</h2>`;
-      }
-      if (line.startsWith("# ")) {
-        return `<h1>${line.replace(/^# /, "")}</h1>`;
-      }
-      if (line.startsWith("- ")) {
-        return `<li>${line.replace(/^- /, "")}</li>`;
-      }
-      if (line.startsWith("> ")) {
-        return `<blockquote>${line.replace(/^> /, "")}</blockquote>`;
-      }
-
-      return `<p>${line
-        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
-        .replace(/_(.*?)_/g, "<em>$1</em>")}</p>`;
-    })
-    .join("");
-
-  html = html.replace(/(<li>[\s\S]*?<\/li>)/g, "<ul>$1</ul>");
-
-  return html;
-}

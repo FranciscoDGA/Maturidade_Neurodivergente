@@ -10,53 +10,59 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: ['var(--font-inter)', 'sans-serif'],
+        display: ['var(--font-outfit)', 'sans-serif'],
       },
       colors: {
-        // Paleta acessível para neurodivergentes
         primary: {
-          50: "#f0f7ff",
-          100: "#e0effe",
-          500: "#4a6bff", // Azul suave
-          600: "#3d56cc",
-          700: "#2d40b8",
+          50: "#f0fdfa",
+          100: "#ccfbf1",
+          500: "#14b8a6", // Teal/Esmeralda suave e moderno
+          600: "#0d9488",
+          700: "#0f766e",
+        },
+        accent: {
+          500: "#8b5cf6", // Roxo vibrante para gradientes
+          600: "#7c3aed",
         },
         neutral: {
           50: "#fafafa",
-          100: "#f5f5f5",
-          200: "#e2e8f0", // Fundo de cards
-          300: "#d1d5db",
-          700: "#374151",
-          800: "#1f2937",
-          900: "#111827",
+          100: "#f4f4f5",
+          200: "#e4e4e7",
+          300: "#d4d4d8",
+          700: "#3f3f46",
+          800: "#27272a",
+          900: "#18181b",
         },
         dark: {
-          bg: "#1a1a2e", // Fundo escuro principal
-          card: "#16213e",
-          text: "#e0e0e0",
+          bg: "#0B0D17", // Fundo luxuoso profundo
+          card: "rgba(255, 255, 255, 0.03)", // Glassmorphism
+          cardHover: "rgba(255, 255, 255, 0.08)",
+          border: "rgba(255, 255, 255, 0.1)",
+          text: "#f4f4f5",
         },
       },
-      fontSize: {
-        // Tipografia acessível
-        xs: ["14px", { lineHeight: "1.5" }],
-        sm: ["16px", { lineHeight: "1.6" }],
-        base: ["16px", { lineHeight: "1.6" }],
-        lg: ["18px", { lineHeight: "1.6" }],
-        xl: ["20px", { lineHeight: "1.6" }],
-        "2xl": ["24px", { lineHeight: "1.5" }],
-        "3xl": ["28px", { lineHeight: "1.4" }],
-        "4xl": ["32px", { lineHeight: "1.3" }],
-        "5xl": ["40px", { lineHeight: "1.2" }],
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'mesh-dark': 'radial-gradient(at 40% 20%, rgba(124, 58, 237, 0.15) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(20, 184, 166, 0.15) 0px, transparent 50%), radial-gradient(at 0% 50%, rgba(139, 92, 246, 0.1) 0px, transparent 50%)',
       },
-      spacing: {
-        // Espaçamento generoso para readabilidade
-        "safe": "1.5rem",
+      boxShadow: {
+        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.3)',
+        'glass-light': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+        'glow': '0 0 20px rgba(124, 58, 237, 0.3)',
       },
-      maxWidth: {
-        content: "700px", // Largura ideal para leitura (600-800px)
+      animation: {
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        }
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 
 export default config;

@@ -1,6 +1,6 @@
 import { PostMetadata } from "@/types/post";
 
-export const allPosts: PostMetadata[] = [
+export const rawPosts: PostMetadata[] = [
   // 🧠 NEURODIVERSIDADE 101 (10 posts)
   {
     title: "Neurodiversidade: O Guia Definitivo para Iniciantes",
@@ -11,6 +11,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["neurodiversidade", "o que é", "iniciantes"],
     coverImage: "/images/abstract_pastel.png",
     difficulty: "iniciante",
+    draft: false,
     featured: true,
   },
   {
@@ -22,6 +23,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["neurodivergente", "neurotípico", "diferenças"],
     coverImage: "/images/arctic_fox.png",
     difficulty: "iniciante",
+    draft: false,
   },
   {
     title: "TEA, TDAH, Dislexia: Os 7 Tipos de Neurodivergência",
@@ -32,6 +34,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["tipos de neurodivergência", "TEA", "TDAH", "dislexia"],
     coverImage: "/images/geometric_balance.png",
     difficulty: "iniciante",
+    draft: true,
   },
   {
     title: "Neurodiversidade no Brasil: Dados, Desafios e Avanços",
@@ -42,6 +45,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["neurodiversidade Brasil", "estatísticas", "políticas públicas"],
     coverImage: "/images/golden_kintsugi_brain.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "5 Mitos sobre Neurodiversidade que Você Precisa Parar de Acreditar",
@@ -52,6 +56,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["mitos neurodiversidade", "conceitos errados"],
     coverImage: "/images/neuro_diversity_brain.png",
     difficulty: "iniciante",
+    draft: false,
   },
   {
     title: "O Movimento da Neurodiversidade: História e Impacto",
@@ -62,6 +67,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["movimento neurodiversidade", "história", "ativismo"],
     coverImage: "/images/neuro_mind_glow.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Neurodiversidade no Trabalho: Legislação e Direitos",
@@ -72,6 +78,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["neurodiversidade trabalho", "lei de cotas", "direitos"],
     coverImage: "/images/serene_nature_mind.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Neuroplasticidade: O Cérebro Neurodivergente Consegue Mudar?",
@@ -82,6 +89,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["neuroplasticidade", "cérebro", "mudança"],
     coverImage: "/images/surreal_architecture.png",
     difficulty: "avançado",
+    draft: true,
   },
   {
     title: "Neurodiversidade e Saúde Mental: A Conexão Importante",
@@ -92,6 +100,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["neurodiversidade", "saúde mental", "ansiedade"],
     coverImage: "/images/abstract_pastel.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Interseccionalidade na Neurodiversidade: Quando Múltiplas Identidades se Cruzam",
@@ -102,6 +111,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["interseccionalidade", "identidades múltiplas", "inclusão"],
     coverImage: "/images/arctic_fox.png",
     difficulty: "avançado",
+    draft: true,
   },
 
   // 🌱 MATURIDADE NEURODIVERGENTE (10 posts)
@@ -114,6 +124,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["maturidade emocional", "inteligência emocional", "desenvolvimento"],
     coverImage: "/images/geometric_balance.png",
     difficulty: "intermediário",
+    draft: false,
     featured: true,
   },
   {
@@ -125,6 +136,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["amadurecimento", "neurodivergente", "desenvolvimento pessoal"],
     coverImage: "/images/golden_kintsugi_brain.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Desenvolvimento Neurodivergente: Etapas e Desafios",
@@ -135,6 +147,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["desenvolvimento", "etapas", "desafios"],
     coverImage: "/images/neuro_diversity_brain.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Neurodivergência na Vida Adulta: O Que Ninguém Te Conta",
@@ -145,6 +158,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["vida adulta", "desafios", "oportunidades"],
     coverImage: "/images/neuro_mind_glow.png",
     difficulty: "intermediário",
+    draft: false,
     featured: true,
   },
   {
@@ -156,6 +170,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["crescimento pessoal", "desenvolvimento", "estratégias"],
     coverImage: "/images/serene_nature_mind.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Autoconhecimento Neurodivergente: Descubra Seu Jeito Único",
@@ -166,6 +181,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["autoconhecimento", "self-awareness", "identidade"],
     coverImage: "/images/surreal_architecture.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Autossabotagem em Neurodivergentes: Como Superar",
@@ -176,6 +192,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["autossabotagem", "crenças limitantes", "superação"],
     coverImage: "/images/abstract_pastel.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Resiliência Neurodivergente: Como Lidar com os Desafios",
@@ -186,6 +203,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["resiliência", "lidar com desafios", "força mental"],
     coverImage: "/images/arctic_fox.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Autocompaixão para Neurodivergentes: Comece a se Tratar com Carinho",
@@ -196,6 +214,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["autocompaixão", "autocuidado", "amor próprio"],
     coverImage: "/images/geometric_balance.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Valores Pessoais e Neurodivergência: Viva Autenticamente",
@@ -206,6 +225,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["valores pessoais", "autenticidade", "propósito"],
     coverImage: "/images/golden_kintsugi_brain.png",
     difficulty: "intermediário",
+    draft: true,
   },
 
   // 🧠 TDAH (8 posts)
@@ -218,6 +238,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["TDAH adultos", "sinais", "tratamento"],
     coverImage: "/images/neuro_diversity_brain.png",
     difficulty: "iniciante",
+    draft: false,
     featured: true,
   },
   {
@@ -229,6 +250,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["TDAH", "maturidade emocional", "regulação emocional"],
     coverImage: "/images/neuro_mind_glow.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "TDAH e Amadurecimento: Por Que Demora Mais?",
@@ -239,6 +261,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["TDAH", "amadurecimento", "desenvolvimento"],
     coverImage: "/images/serene_nature_mind.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "TDAH e Tomada de Decisão: Dicas para Acertar Mais",
@@ -249,6 +272,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["TDAH", "tomada de decisão", "impulsividade"],
     coverImage: "/images/surreal_architecture.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Organização para TDAH: Métodos que Realmente Funcionam",
@@ -259,6 +283,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["TDAH", "organização", "produtividade"],
     coverImage: "/images/abstract_pastel.png",
     difficulty: "intermediário",
+    draft: false,
   },
   {
     title: "Procrastinação no TDAH: Como Vencer Esta Batalha",
@@ -269,6 +294,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["TDAH", "procrastinação", "gestão de tempo"],
     coverImage: "/images/arctic_fox.png",
     difficulty: "intermediário",
+    draft: false,
   },
   {
     title: "Relacionamentos com TDAH: Como Manter a Estabilidade",
@@ -279,6 +305,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["TDAH", "relacionamentos", "comunicação"],
     coverImage: "/images/geometric_balance.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Carreira para Pessoas com TDAH: Profissões Ideais",
@@ -289,6 +316,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["TDAH", "carreira", "trabalho"],
     coverImage: "/images/golden_kintsugi_brain.png",
     difficulty: "intermediário",
+    draft: true,
   },
 
   // 🧩 AUTISMO (8 posts)
@@ -301,6 +329,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["autismo adultos", "diagnóstico tardio", "aceitação"],
     coverImage: "/images/neuro_diversity_brain.png",
     difficulty: "iniciante",
+    draft: false,
     featured: true,
   },
   {
@@ -312,6 +341,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["autismo", "maturidade emocional", "emoções"],
     coverImage: "/images/neuro_mind_glow.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Autismo e Independência: Como Alcançar a Autonomia",
@@ -322,6 +352,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["autismo", "independência", "autonomia"],
     coverImage: "/images/serene_nature_mind.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Amizades no Autismo: Como Construir Conexões Genuínas",
@@ -332,6 +363,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["autismo", "amizade", "relações sociais"],
     coverImage: "/images/surreal_architecture.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Autismo no Mercado de Trabalho: Direitos e Oportunidades",
@@ -342,6 +374,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["autismo", "trabalho", "inclusão"],
     coverImage: "/images/abstract_pastel.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Sensibilidade Emocional no Autismo: Como Gerenciar",
@@ -352,6 +385,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["autismo", "sensibilidade emocional", "regulação"],
     coverImage: "/images/arctic_fox.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Masking no Autismo: O Custo de Esconder Quem Você É",
@@ -362,6 +396,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["autismo", "masking", "autenticidade"],
     coverImage: "/images/geometric_balance.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Burnout Autista: Reconhecer e Prevenir o Colapso",
@@ -372,6 +407,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["autismo", "burnout", "esgotamento"],
     coverImage: "/images/golden_kintsugi_brain.png",
     difficulty: "intermediário",
+    draft: true,
   },
 
   // 🔍 DIAGNÓSTICO TARDIO (6 posts)
@@ -384,6 +420,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["diagnóstico tardio", "descoberta", "identidade"],
     coverImage: "/images/neuro_diversity_brain.png",
     difficulty: "intermediário",
+    draft: false,
     featured: true,
   },
   {
@@ -395,6 +432,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["teste", "sinais", "autodiagnóstico"],
     coverImage: "/images/neuro_mind_glow.png",
     difficulty: "iniciante",
+    draft: true,
   },
   {
     title: "10 Sinais de Neurodivergência em Adultos que Você Ignora",
@@ -405,6 +443,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["sinais", "neurodivergência", "adultos"],
     coverImage: "/images/serene_nature_mind.png",
     difficulty: "iniciante",
+    draft: true,
   },
   {
     title: "Diagnóstico de TDAH em Adultos: Passo a Passo",
@@ -415,6 +454,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["diagnóstico TDAH", "processo", "profissionais"],
     coverImage: "/images/surreal_architecture.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Diagnóstico de Autismo em Adultos: Como Conseguir",
@@ -425,6 +465,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["diagnóstico autismo", "adultos", "processo"],
     coverImage: "/images/abstract_pastel.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Neurodivergência Não Diagnosticada: O Impacto na Vida",
@@ -435,6 +476,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["não diagnosticado", "impacto", "acesso"],
     coverImage: "/images/arctic_fox.png",
     difficulty: "intermediário",
+    draft: true,
   },
 
   // 💡 AUTOCONHECIMENTO (6 posts)
@@ -447,6 +489,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["autoconhecimento", "ferramentas", "autodescoberta"],
     coverImage: "/images/geometric_balance.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Autoestima em Neurodivergentes: Como se Aceitar",
@@ -457,6 +500,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["autoestima", "aceitação", "amor próprio"],
     coverImage: "/images/golden_kintsugi_brain.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Neurodivergência e Identidade: Construindo Sua Narrativa",
@@ -467,6 +511,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["identidade", "narrativa pessoal", "integração"],
     coverImage: "/images/neuro_diversity_brain.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Journaling para Neurodivergentes: Como Escrever para si Mesmo",
@@ -477,6 +522,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["journaling", "escrita", "reflexão"],
     coverImage: "/images/neuro_mind_glow.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Meditação para Neurodivergentes: Técnicas Adaptadas",
@@ -487,6 +533,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["meditação", "mindfulness", "técnicas adaptadas"],
     coverImage: "/images/serene_nature_mind.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Criatividade Neurodivergente: Como Usar a Seu Favor",
@@ -497,6 +544,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["criatividade", "talento", "expressão"],
     coverImage: "/images/surreal_architecture.png",
     difficulty: "intermediário",
+    draft: true,
   },
 
   // 🤝 RELAÇÕES (6 posts)
@@ -509,6 +557,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["relacionamentos", "amor", "casamento"],
     coverImage: "/images/abstract_pastel.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Amizades Neurodivergentes: Qualidade sobre Quantidade",
@@ -519,6 +568,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["amizades", "relacionamentos", "conexões"],
     coverImage: "/images/arctic_fox.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Família Neurodivergente: Como Explicar para Seus Pais",
@@ -529,6 +579,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["família", "comunicação", "aceitação"],
     coverImage: "/images/geometric_balance.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Namoro Neurodivergente: Dicas para um Relacionamento Saudável",
@@ -539,6 +590,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["namoro", "relacionamento", "romance"],
     coverImage: "/images/golden_kintsugi_brain.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Comunicação Neurodivergente: Como Ser Entendido",
@@ -549,6 +601,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["comunicação", "expressão", "entendimento"],
     coverImage: "/images/neuro_diversity_brain.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Como Colocar Limites Sendo Neurodivergente",
@@ -559,6 +612,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["limites", "assertividade", "relacionamentos"],
     coverImage: "/images/neuro_mind_glow.png",
     difficulty: "intermediário",
+    draft: true,
   },
 
   // 💼 CARREIRA (6 posts)
@@ -571,6 +625,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["trabalho", "direitos", "adaptações"],
     coverImage: "/images/serene_nature_mind.png",
     difficulty: "intermediário",
+    draft: true,
     featured: true,
   },
   {
@@ -582,6 +637,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["profissões", "carreira", "trabalho"],
     coverImage: "/images/surreal_architecture.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Produtividade Neurodivergente: Métodos que Realmente Funcionam",
@@ -592,6 +648,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["produtividade", "trabalho", "eficiência"],
     coverImage: "/images/abstract_pastel.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Burnout em Neurodivergentes: Como Evitar",
@@ -602,6 +659,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["burnout", "trabalho", "esgotamento"],
     coverImage: "/images/arctic_fox.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Home Office para Neurodivergentes: Como Organizar",
@@ -612,6 +670,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["home office", "trabalho remoto", "organização"],
     coverImage: "/images/geometric_balance.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Como Passar em Entrevistas Sendo Neurodivergente",
@@ -622,6 +681,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["entrevista", "emprego", "apresentação"],
     coverImage: "/images/golden_kintsugi_brain.png",
     difficulty: "intermediário",
+    draft: true,
   },
 
   // 🧘 SAÚDE MENTAL (6 posts)
@@ -634,6 +694,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["ansiedade", "saúde mental", "manejo"],
     coverImage: "/images/neuro_diversity_brain.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Depressão e Neurodivergência: Como Lidar",
@@ -644,6 +705,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["depressão", "saúde mental", "ajuda"],
     coverImage: "/images/neuro_mind_glow.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Terapia para Neurodivergentes: Qual a Melhor Abordagem?",
@@ -654,6 +716,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["terapia", "saúde mental", "tratamento"],
     coverImage: "/images/serene_nature_mind.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Autocompaixão para Neurodivergentes: Comece a se Tratar com Carinho",
@@ -664,6 +727,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["autocompaixão", "saúde mental", "bem-estar"],
     coverImage: "/images/surreal_architecture.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Rotina para Neurodivergentes: Como Criar uma que Funcione",
@@ -674,6 +738,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["rotina", "estrutura", "organização"],
     coverImage: "/images/abstract_pastel.png",
     difficulty: "intermediário",
+    draft: true,
   },
   {
     title: "Dificuldades de Sono em Neurodivergentes: Soluções Práticas",
@@ -684,6 +749,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["sono", "insônia", "descanso"],
     coverImage: "/images/arctic_fox.png",
     difficulty: "intermediário",
+    draft: true,
   },
 
   // 🛠️ RECURSOS (5 posts)
@@ -696,6 +762,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["ferramentas", "aplicativos", "recursos"],
     coverImage: "/images/geometric_balance.png",
     difficulty: "iniciante",
+    draft: true,
   },
   {
     title: "10 Livros sobre Neurodiversidade para Ler em 2026",
@@ -706,6 +773,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["livros", "leitura", "recomendações"],
     coverImage: "/images/golden_kintsugi_brain.png",
     difficulty: "iniciante",
+    draft: true,
   },
   {
     title: "Melhores Apps para Gerenciar o TDAH",
@@ -716,6 +784,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["apps", "TDAH", "produtividade"],
     coverImage: "/images/neuro_diversity_brain.png",
     difficulty: "iniciante",
+    draft: true,
   },
   {
     title: "Comunidades Neurodivergentes: Onde Encontrar Apoio",
@@ -726,6 +795,7 @@ export const allPosts: PostMetadata[] = [
     keywords: ["comunidades", "suporte", "conexão"],
     coverImage: "/images/neuro_mind_glow.png",
     difficulty: "iniciante",
+    draft: true,
   },
   {
     title: "Cursos Online sobre Neurodiversidade (Grátis e Pagos)",
@@ -736,8 +806,11 @@ export const allPosts: PostMetadata[] = [
     keywords: ["cursos", "educação", "aprendizado"],
     coverImage: "/images/serene_nature_mind.png",
     difficulty: "iniciante",
+    draft: true,
   },
 ];
+
+export const allPosts = rawPosts.filter(post => !post.draft);
 
 export function getPostsByCategory(category: string): PostMetadata[] {
   return allPosts.filter((post) => post.category === category);

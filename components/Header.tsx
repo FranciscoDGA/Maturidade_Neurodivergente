@@ -7,6 +7,8 @@ import ThemeToggle from "./ThemeToggle";
 const navigation = [
   { name: "Início", href: "/" },
   { name: "Blog", href: "/blog" },
+  { name: "Buscar", href: "/search" },
+  { name: "Favoritos", href: "/favoritos" },
   { name: "Sobre", href: "/about" },
   { name: "Contato", href: "/contact" },
 ];

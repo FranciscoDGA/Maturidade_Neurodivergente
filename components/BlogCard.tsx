@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { PostMetadata } from "@/types/post";
+import FavoriteButton from "./FavoriteButton";
 
 export default function BlogCard({ post }: { post: PostMetadata }) {
   const formattedDate = new Date(post.date).toLocaleDateString("pt-BR", {
@@ -61,6 +62,9 @@ export default function BlogCard({ post }: { post: PostMetadata }) {
               </svg>
             </span>
           )}
+          <div className="ml-auto">
+            <FavoriteButton slug={post.slug} />
+          </div>
         </div>
       </div>
     </article>

@@ -55,8 +55,8 @@ export function generateOrganizationSchema() {
     name: "Maturidade Neurodivergente",
     description:
       "Um espaço inclusivo para entender maturidade neurodivergente com clareza, compaixão e acessibilidade.",
-    url: "https://maturidadeneurodivergente.com",
-    logo: "https://maturidadeneurodivergente.com/logo.png",
+    url: "https://maturidadeneurodivergente.com.br",
+    logo: "https://maturidadeneurodivergente.com.br/logo.png",
     sameAs: [
       "https://instagram.com/maturidadend",
       "https://twitter.com/maturidadend",

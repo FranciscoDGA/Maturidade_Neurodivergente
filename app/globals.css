@@ -51,6 +51,7 @@ a:hover {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-outfit), sans-serif;
   font-weight: bold;
   letter-spacing: -0.025em;
 }

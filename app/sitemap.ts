@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const routes = ['', '/blog', '/about', '/contact', '/privacy', '/terms'].map(
+  const routes = ['', '/blog', '/about', '/contact', '/privacy', '/terms', '/cookies'].map(
     (route) => ({
       url: `${baseUrl}${route}`,
       lastModified: new Date(),

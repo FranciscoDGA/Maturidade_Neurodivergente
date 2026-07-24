@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sobre Nós",
+  description:
+    "Conheça o Maturidade Neurodivergente — um espaço dedicado a explorar, entender e celebrar a vida como pessoa neurodivergente.",
+  alternates: { canonical: "/about" },
+};
+
 export default function About() {
   return (
     <>

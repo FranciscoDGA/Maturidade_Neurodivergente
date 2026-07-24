@@ -1,17 +1,63 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ThemeProvider from "@/components/ThemeProvider";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
-  title: "Maturidade Neurodivergente",
-  description: "Um espaço para entender seu desenvolvimento único",
+  title: {
+    default: "Maturidade Neurodivergente | Neurodiversidade, TDAH, Autismo",
+    template: "%s | Maturidade Neurodivergente",
+  },
+  description:
+    "Um espaço inclusivo para entender neurodiversidade, TDAH, autismo e maturidade neurodivergente com clareza, compaixão e acessibilidade.",
+  metadataBase: new URL("https://maturidadeneurodivergente.com.br"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "https://maturidadeneurodivergente.com.br",
+    siteName: "Maturidade Neurodivergente",
+    title: "Maturidade Neurodivergente | Neurodiversidade, TDAH, Autismo",
+    description:
+      "Um espaço inclusivo para entender neurodiversidade, TDAH, autismo e maturidade neurodivergente com clareza, compaixão e acessibilidade.",
+    images: [
+      {
+        url: "/images/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: "Maturidade Neurodivergente",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Maturidade Neurodivergente | Neurodiversidade, TDAH, Autismo",
+    description:
+      "Um espaço inclusivo para entender neurodiversidade, TDAH, autismo e maturidade neurodivergente.",
+    images: ["/images/og-default.png"],
+  },
   icons: {
     icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -27,12 +73,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning className={inter.variable}>
+    <html lang="pt-BR" suppressHydrationWarning className={`${inter.variable} ${outfit.variable}`}>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <meta name="theme-color" content="#4a6bff" />
+        <meta name="google-site-verification" content="qH9gltE4Lk1p5ONSBCSMwkXGR9eqixIDruwOJLPqlZQ" />
       </head>
-      <body className="flex flex-col min-h-screen bg-neutral-50 text-neutral-900 dark:bg-[#0f172a] dark:text-neutral-100 font-sans antialiased transition-colors duration-300">
+      <body className="flex flex-col min-h-screen bg-neutral-50 text-neutral-900 dark:bg-dark-bg dark:bg-mesh-dark dark:text-neutral-100 font-sans antialiased transition-colors duration-300">
         <a href="#main" className="skip-to-main">
           Ir para conteúdo principal
         </a>
@@ -46,6 +93,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );

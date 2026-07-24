@@ -10,6 +10,7 @@ export interface PostMetadata {
   difficulty?: "iniciante" | "intermediário" | "avançado";
   coverImage?: string;
   featured?: boolean;
+  draft?: boolean;
 }
 
 export type Category =
