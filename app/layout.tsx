@@ -77,7 +77,8 @@ export default function RootLayout({
     <html lang="pt-BR" suppressHydrationWarning className={`${inter.variable} ${outfit.variable}`}>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <meta name="theme-color" content="#4a6bff" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#7c3aed" />
         <meta name="google-site-verification" content="qH9gltE4Lk1p5ONSBCSMwkXGR9eqixIDruwOJLPqlZQ" />
       </head>
       <body className="flex flex-col min-h-screen bg-neutral-50 text-neutral-900 dark:bg-dark-bg dark:bg-mesh-dark dark:text-neutral-100 font-sans antialiased transition-colors duration-300">

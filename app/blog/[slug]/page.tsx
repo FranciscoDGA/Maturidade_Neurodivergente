@@ -10,7 +10,7 @@ import AudioReader from "@/components/AudioReader";
 import Comments from "@/components/Comments";
 import Newsletter from "@/components/Newsletter";
 import CommunityCTA from "@/components/CommunityCTA";
-import { generateBlogPostSchema } from "@/lib/seo";
+import { generateBlogPostSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/seo";
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -83,6 +83,16 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       coverImage: p.coverImage,
     }));
 
+  const faqRegex = /### (.+?)\n\n([\s\S]*?)(?=### |---|\*\*Fontes|$)/g;
+  const faqs: { question: string; answer: string }[] = [];
+  let match;
+  while ((match = faqRegex.exec(post.content)) !== null) {
+    faqs.push({
+      question: match[1].replace(/\?$/, ""),
+      answer: match[2].replace(/\n/g, " ").trim(),
+    });
+  }
+
   const formattedDate = new Date(post.date).toLocaleDateString("pt-BR", {
     year: "numeric",
     month: "long",
@@ -106,10 +116,39 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           ),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            generateBreadcrumbSchema([
+              { name: "Início", url: "/" },
+              { name: "Blog", url: "/blog" },
+              { name: post.title, url: `/blog/${slug}` },
+            ])
+          ),
+        }}
+      />
+      {faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateFAQSchema(faqs)),
+          }}
+        />
+      )}
 
       {/* Article Header */}
       <article className="max-w-content mx-auto mb-16">
         <header className="mb-8">
+          <nav aria-label="Breadcrumb" className="mb-4">
+            <ol className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400">
+              <li><Link href="/" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Início</Link></li>
+              <li><span className="mx-1">/</span></li>
+              <li><Link href="/blog" className="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Blog</Link></li>
+              <li><span className="mx-1">/</span></li>
+              <li className="text-neutral-900 dark:text-white font-medium truncate max-w-[200px]">{post.title}</li>
+            </ol>
+          </nav>
           <Link
             href="/blog"
             className="text-primary-600 dark:text-primary-400 font-semibold mb-4 inline-block"

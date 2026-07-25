@@ -1,0 +1,23 @@
+{
+  "name": "Maturidade Neurodivergente",
+  "short_name": "MaturidadeND",
+  "description": "Um espaço inclusivo para entender neurodiversidade, TDAH, autismo e maturidade neurodivergente.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7c3aed",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "lang": "pt-BR",
+  "orientation": "portrait-primary"
+}
