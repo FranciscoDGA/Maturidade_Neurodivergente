@@ -15,34 +15,35 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 dark:bg-[#0f172a]/80 backdrop-blur-md border-b border-neutral-200 dark:border-slate-800 transition-colors duration-300">
-      <nav className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <header className="sticky top-0 z-50 bg-neutral-50/90 dark:bg-dark-bg/90 backdrop-blur-md border-b border-neutral-200 dark:border-dark-border transition-colors duration-500">
+      <nav className="w-full mx-auto px-6 sm:px-12 py-6">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           {/* Logo */}
           <Link
             href="/"
-            className="group text-xl sm:text-2xl font-black tracking-tighter text-neutral-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg px-1 flex items-center gap-1 min-w-0"
+            className="group font-display font-light text-neutral-900 dark:text-white flex items-center gap-1.5 focus:outline-none"
           >
-            <span className="text-primary-600 dark:text-primary-500 font-extrabold tracking-tight">M</span>
-            <span className="text-neutral-900 dark:text-white font-light tracking-widest uppercase text-[10px] sm:text-xs md:text-sm mt-1 truncate">Neurodivergente</span>
+            <span className="font-bold tracking-tight">Maturidade</span>
+            <span className="text-neutral-500 font-normal">Neurodivergente</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-semibold text-neutral-600 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-neutral-100 dark:hover:bg-slate-800/50 transition-all focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-full px-4 py-2"
+                className="text-sm font-medium text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors focus:outline-none relative group"
               >
                 {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-neutral-900 dark:bg-white transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </div>
 
           {/* Right side - Theme & Mobile Menu */}
-          <div className="flex items-center gap-2">
-            <div className="hover:bg-neutral-100 dark:hover:bg-slate-800/50 rounded-full transition-all">
+          <div className="flex items-center gap-4">
+            <div className="text-neutral-500 hover:text-neutral-900 dark:hover:text-white transition-colors">
               <ThemeToggle />
             </div>
 
@@ -51,9 +52,9 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Abrir menu"
               aria-expanded={mobileMenuOpen}
-              className="md:hidden text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-neutral-100 dark:hover:bg-slate-800/50 transition-all focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-full p-2.5 flex items-center justify-center"
+              className="md:hidden text-neutral-500 focus:outline-none"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>
             </button>
@@ -62,13 +63,13 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 pt-4 border-t border-neutral-200 dark:border-slate-800 pb-2">
+          <div className="md:hidden mt-6 pt-6 border-t border-neutral-200 dark:border-dark-border">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 px-4 text-base font-semibold text-neutral-700 dark:text-neutral-200 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-neutral-50 dark:hover:bg-slate-800/50 rounded-xl transition-all"
+                className="block py-3 text-lg font-medium text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white transition-colors"
               >
                 {item.name}
               </Link>

@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Maturidade Neurodivergente | Neurodiversidade, TDAH, Autismo",
   description:
-    "Um espaço inclusivo para entender neurodiversidade, TDAH, autismo e maturidade neurodivergente. Artigos, guias e recursos para cérebros diversos.",
+    "Um espaço editorial para explorar neurodiversidade, TDAH, autismo e maturidade com clareza, empatia e sem jargões corporativos.",
   alternates: {
     canonical: "/",
   },
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     url: "https://maturidadeneurodivergente.com.br",
     title: "Maturidade Neurodivergente | Neurodiversidade, TDAH, Autismo",
     description:
-      "Um espaço inclusivo para entender neurodiversidade, TDAH, autismo e maturidade neurodivergente.",
+      "Um espaço editorial para explorar neurodiversidade, TDAH, autismo e maturidade com clareza, empatia e sem jargões corporativos.",
     images: [
       {
         url: "/images/og-default.png",
@@ -37,14 +37,14 @@ export default function Home() {
   
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString("pt-BR", {
-      month: "short",
+      month: "long",
       day: "numeric",
       year: "numeric"
     });
   };
 
   return (
-    <div className="py-16 font-sans relative">
+    <div className="font-sans relative">
       {/* JSON-LD Organization Schema */}
       <script
         type="application/ld+json"
@@ -54,201 +54,175 @@ export default function Home() {
       />
 
       {/* Hero Section */}
-      <div className="mb-20 max-w-4xl space-y-6">
-        <h1 className="text-4xl md:text-6xl font-display font-bold tracking-tight text-neutral-900 dark:text-neutral-50 leading-tight">
-          Entenda a Neurodiversidade. <br className="hidden sm:block"/> Viva a Maturidade.
+      <div className="pt-24 pb-32 max-w-5xl">
+        <h1 className="text-5xl md:text-7xl font-display font-light tracking-tight text-neutral-900 dark:text-neutral-50 leading-[1.1] mb-8">
+          Entenda a Neurodiversidade. <br className="hidden sm:block"/>
+          <span className="font-bold">Viva a Maturidade.</span>
         </h1>
-        <p className="text-neutral-600 dark:text-neutral-400 text-lg md:text-xl max-w-2xl leading-relaxed">
-          Um espaço calmo para mentes ativas. Sem jargões — apenas reflexão, significado e recursos validados para a sua evolução pessoal.
+        <p className="text-neutral-500 dark:text-neutral-400 text-xl md:text-2xl max-w-3xl leading-relaxed font-light">
+          Um espaço editorial dedicado a mentes ativas. Sem jargões corporativos — apenas reflexão, significado e recursos validados para o seu desenvolvimento.
         </p>
       </div>
 
       {/* Hero Post */}
       {heroPost && (
-        <div className="mb-24">
-          <Link href={`/blog/${heroPost.slug}`} className="group flex flex-col md:flex-row gap-8 items-center bg-white dark:bg-dark-card border border-neutral-200 dark:border-dark-border rounded-2xl p-6 transition-all duration-300 hover:shadow-soft">
-            <div className="w-full md:w-1/2 aspect-video relative rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 shrink-0">
+        <div className="mb-32">
+          <Link href={`/blog/${heroPost.slug}`} className="group block">
+            <div className="w-full aspect-[21/9] md:aspect-[24/9] relative bg-neutral-100 dark:bg-neutral-900 mb-10 overflow-hidden">
               {heroPost.coverImage && (
                 <Image
                   src={heroPost.coverImage}
                   alt={heroPost.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 ease-in-out"
                   priority
                 />
               )}
             </div>
-            <div className="w-full md:w-1/2 flex flex-col justify-center space-y-4">
-              <span className="text-primary-600 dark:text-primary-500 font-medium uppercase tracking-wide text-sm">
+            <div className="max-w-4xl">
+              <span className="text-neutral-900 dark:text-white font-bold uppercase tracking-widest text-xs mb-4 block">
                 {heroPost.category}
               </span>
-              <h2 className="text-2xl md:text-4xl font-display font-bold text-neutral-900 dark:text-white leading-tight group-hover:text-primary-600 dark:group-hover:text-primary-500 transition-colors">
+              <h2 className="text-4xl md:text-5xl font-display font-bold text-neutral-900 dark:text-white leading-tight mb-6 transition-colors group-hover:text-neutral-500">
                 {heroPost.title}
               </h2>
-              <p className="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed">
+              <p className="text-neutral-500 dark:text-neutral-400 text-xl leading-relaxed font-light mb-8 max-w-3xl">
                 {heroPost.excerpt}
               </p>
-              <div className="flex items-center gap-3 pt-4">
-                <div>
-                  <p className="text-sm font-semibold text-neutral-900 dark:text-white">{heroPost.author || "Equipe Editorial"}</p>
-                  <p className="text-sm text-neutral-500">{formatDate(heroPost.date)}</p>
-                </div>
+              <div className="flex items-center gap-4 text-sm text-neutral-400 uppercase tracking-widest">
+                <span>{heroPost.author || "Editorial"}</span>
+                <span>&mdash;</span>
+                <span>{formatDate(heroPost.date)}</span>
               </div>
             </div>
           </Link>
         </div>
       )}
 
-      {/* Main Content + Sidebar Grid */}
-      <div className="grid lg:grid-cols-12 gap-12">
+      {/* Main Content Grid */}
+      <div className="grid lg:grid-cols-12 gap-16 mb-32">
         
-        {/* Left Column */}
-        <div className="lg:col-span-8 space-y-12">
-          <div>
-            <h3 className="text-2xl font-display font-bold mb-8 text-neutral-900 dark:text-white border-b border-neutral-200 dark:border-dark-border pb-4">Artigos em Destaque</h3>
-            <div className="grid sm:grid-cols-2 gap-8">
-              {breakingNews.map((post) => (
-                <div key={post.slug} className="group flex flex-col">
-                  <Link 
-                    href={`/blog/${post.slug}`} 
-                    className="block h-full space-y-4"
-                  >
-                    <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-                      {post.coverImage && (
-                        <Image
-                          src={post.coverImage}
-                          alt={post.title}
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                      )}
-                    </div>
-                    <div className="flex flex-col flex-1 space-y-2">
-                      <span className="text-primary-600 dark:text-primary-500 font-medium text-xs uppercase tracking-wide">
-                        {post.category}
-                      </span>
-                      <h4 className="text-xl font-display font-bold text-neutral-900 dark:text-white leading-snug group-hover:text-primary-600 dark:group-hover:text-primary-500 transition-colors">
-                        {post.title}
-                      </h4>
-                      <p className="text-neutral-600 dark:text-neutral-400 line-clamp-3 text-sm flex-1 leading-relaxed">
-                        {post.excerpt}
-                      </p>
-                      <p className="text-xs text-neutral-500 pt-2">{formatDate(post.date)}</p>
-                    </div>
-                  </Link>
-                </div>
-              ))}
-            </div>
+        {/* Left Column (Featured Articles) */}
+        <div className="lg:col-span-8">
+          <h3 className="text-xs font-bold uppercase tracking-widest text-neutral-900 dark:text-white mb-12 border-b border-neutral-200 dark:border-dark-border pb-4">
+            Em Destaque
+          </h3>
+          <div className="flex flex-col space-y-16">
+            {breakingNews.map((post) => (
+              <article key={post.slug} className="group">
+                <Link href={`/blog/${post.slug}`} className="flex flex-col sm:flex-row gap-8 items-start">
+                  <div className="w-full sm:w-2/5 aspect-[4/3] relative bg-neutral-100 dark:bg-neutral-900 shrink-0 overflow-hidden">
+                    {post.coverImage && (
+                      <Image
+                        src={post.coverImage}
+                        alt={post.title}
+                        fill
+                        className="object-cover grayscale opacity-90 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-in-out"
+                      />
+                    )}
+                  </div>
+                  <div className="w-full sm:w-3/5 flex flex-col justify-center py-2">
+                    <span className="text-neutral-900 dark:text-white font-bold uppercase tracking-widest text-[10px] mb-3">
+                      {post.category}
+                    </span>
+                    <h4 className="text-2xl font-display font-bold text-neutral-900 dark:text-white leading-snug mb-4 group-hover:text-neutral-500 transition-colors">
+                      {post.title}
+                    </h4>
+                    <p className="text-neutral-500 dark:text-neutral-400 line-clamp-3 text-base leading-relaxed font-light mb-4">
+                      {post.excerpt}
+                    </p>
+                    <span className="text-[10px] text-neutral-400 uppercase tracking-widest">{formatDate(post.date)}</span>
+                  </div>
+                </Link>
+              </article>
+            ))}
           </div>
         </div>
 
-        {/* Right Column - Sidebar */}
-        <div className="lg:col-span-4 space-y-10">
-          
-          {/* Flash News */}
-          <div>
-            <h4 className="text-lg font-display font-bold text-neutral-900 dark:text-white mb-6 border-b border-neutral-200 dark:border-dark-border pb-4">
+        {/* Right Column (Sidebar) */}
+        <div className="lg:col-span-4">
+          <div className="sticky top-32">
+            
+            {/* Recent Articles */}
+            <h4 className="text-xs font-bold uppercase tracking-widest text-neutral-900 dark:text-white mb-8 border-b border-neutral-200 dark:border-dark-border pb-4">
               Recentes
             </h4>
-            <div className="space-y-6">
+            <div className="flex flex-col space-y-8 mb-16">
               {flashNews.length > 0 ? flashNews.map((post) => (
-                <div key={post.slug} className="group">
-                  <Link href={`/blog/${post.slug}`} className="flex flex-col space-y-1">
-                    <h5 className="font-bold text-neutral-900 dark:text-white leading-snug group-hover:text-primary-600 dark:group-hover:text-primary-500 transition-colors">
-                      {post.title}
-                    </h5>
-                    <p className="text-sm text-neutral-500">{post.category} &middot; {formatDate(post.date)}</p>
-                  </Link>
-                </div>
+                <Link key={post.slug} href={`/blog/${post.slug}`} className="group flex flex-col">
+                  <h5 className="font-display font-bold text-lg text-neutral-900 dark:text-white leading-snug mb-2 group-hover:text-neutral-500 transition-colors">
+                    {post.title}
+                  </h5>
+                  <span className="text-[10px] text-neutral-400 uppercase tracking-widest">
+                    {post.category} &middot; {formatDate(post.date)}
+                  </span>
+                </Link>
               )) : (
-                <p className="text-sm text-neutral-500">Em breve, novos artigos aqui!</p>
+                <p className="text-sm text-neutral-400 font-light">Em breve, novos artigos aqui!</p>
               )}
             </div>
-          </div>
 
-          {/* About Card */}
-          <div className="bg-neutral-50 dark:bg-dark-card border border-neutral-200 dark:border-dark-border rounded-2xl p-8">
-            <h4 className="text-lg font-display font-bold text-neutral-900 dark:text-white mb-4">
-              Sobre o Projeto
-            </h4>
-            <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6">
-              Maturidade Neurodivergente é um espaço criado por neurodivergentes, para neurodivergentes. Fornecemos conteúdo acessível, validado por profissionais e baseado em evidências.
-            </p>
-            <Link href="/about" className="inline-block font-medium text-primary-600 dark:text-primary-500 hover:underline">
-              Nossa História &rarr;
-            </Link>
-          </div>
-
-          {/* Popular Tags */}
-          <div>
-            <h4 className="text-lg font-display font-bold text-neutral-900 dark:text-white mb-4 border-b border-neutral-200 dark:border-dark-border pb-4">
+            {/* Tags */}
+            <h4 className="text-xs font-bold uppercase tracking-widest text-neutral-900 dark:text-white mb-8 border-b border-neutral-200 dark:border-dark-border pb-4">
               Tópicos
             </h4>
             <div className="flex flex-wrap gap-2">
-              {["TDAH", "Autismo", "Diagnóstico", "Maturidade", "Organização", "Autoconhecimento", "Saúde Mental"].map((tag) => (
+              {["TDAH", "Autismo", "Diagnóstico Tardio", "Maturidade", "Organização", "Autoconhecimento", "Saúde Mental"].map((tag) => (
                 <span
                   key={tag}
-                  className="px-4 py-2 text-sm font-medium rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300"
+                  className="px-3 py-1 text-xs font-medium border border-neutral-200 dark:border-dark-border text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-white hover:border-neutral-900 dark:hover:border-white transition-colors cursor-default"
                 >
                   {tag}
                 </span>
               ))}
             </div>
+
           </div>
         </div>
       </div>
 
-      {/* --- EXPLORE BY CATEGORY --- */}
-      <div className="mt-24 border-t border-neutral-200 dark:border-dark-border pt-16">
-        <div className="mb-12">
-          <h2 className="text-3xl font-display font-bold text-neutral-900 dark:text-white mb-4">
-            Explorar Categorias
+      {/* Explore by Category */}
+      <div className="py-24 border-t border-neutral-200 dark:border-dark-border">
+        <div className="mb-16 max-w-2xl">
+          <h2 className="text-3xl font-display font-light text-neutral-900 dark:text-white mb-4">
+            Explorar por <span className="font-bold">Categorias</span>
           </h2>
-          <p className="text-neutral-600 dark:text-neutral-400">
-            Encontre exatamente o que você busca.
+          <p className="text-neutral-500 dark:text-neutral-400 font-light text-lg">
+            Aprofunde-se nos temas que mais ressoam com seu momento atual.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12">
           {[
-            { name: "Neurodiversidade 101", desc: "O básico para começar", count: allPosts.filter(p => p.category === "Neurodiversidade 101").length },
+            { name: "Neurodiversidade 101", desc: "Os conceitos fundamentais", count: allPosts.filter(p => p.category === "Neurodiversidade 101").length },
             { name: "Maturidade Neurodivergente", desc: "Crescimento pessoal", count: allPosts.filter(p => p.category === "Maturidade Neurodivergente").length },
-            { name: "TDAH", desc: "Organização e Foco", count: allPosts.filter(p => p.category === "TDAH").length },
-            { name: "Autismo", desc: "Identidade e Limites", count: allPosts.filter(p => p.category === "Autismo").length }
+            { name: "TDAH", desc: "Foco e função executiva", count: allPosts.filter(p => p.category === "TDAH").length },
+            { name: "Autismo", desc: "Identidade e regulação", count: allPosts.filter(p => p.category === "Autismo").length }
           ].map((cat) => (
-            <Link href={`/blog?category=${encodeURIComponent(cat.name)}`} key={cat.name} className="group bg-white dark:bg-dark-card border border-neutral-200 dark:border-dark-border rounded-xl p-6 hover:border-primary-500 dark:hover:border-primary-500 transition-colors">
-              <h3 className="font-bold text-neutral-900 dark:text-white text-lg mb-2">{cat.name}</h3>
-              <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4">{cat.desc}</p>
-              <span className="text-sm font-medium text-primary-600 dark:text-primary-500">{cat.count} artigos</span>
+            <Link href={`/blog?category=${encodeURIComponent(cat.name)}`} key={cat.name} className="group block">
+              <h3 className="font-bold text-neutral-900 dark:text-white text-lg mb-2 group-hover:text-neutral-500 transition-colors">{cat.name}</h3>
+              <p className="text-sm text-neutral-500 font-light mb-4">{cat.desc}</p>
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-neutral-400">
+                <span>{cat.count} artigos</span>
+                <span className="opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 duration-300">&rarr;</span>
+              </div>
             </Link>
           ))}
         </div>
       </div>
 
-      {/* --- FINAL CTA: Newsletter --- */}
-      <div className="mt-32 mb-20">
-        <div className="bg-neutral-100 dark:bg-neutral-900 rounded-2xl p-12 flex flex-col items-center text-center">
-          <h2 className="text-2xl md:text-3xl font-display font-bold text-neutral-900 dark:text-white mb-4">
-            Acompanhe nossa Newsletter
-          </h2>
-          <p className="text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto mb-8 text-lg">
-            Dicas práticas, orientação e acolhimento direto no seu email. Sem spam.
-          </p>
-          
-          <form className="w-full max-w-md flex flex-col sm:flex-row gap-3">
-            <input 
-              type="email" 
-              placeholder="Seu melhor email..." 
-              className="flex-1 bg-white dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 rounded-lg px-4 py-3 text-neutral-900 dark:text-white placeholder-neutral-500 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 transition-all"
-              required
-            />
-            <button 
-              type="submit" 
-              className="bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 font-medium rounded-lg px-6 py-3 hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors"
-            >
-              Inscrever-se
-            </button>
-          </form>
-        </div>
+      {/* Minimalist CTA */}
+      <div className="py-32 border-t border-neutral-200 dark:border-dark-border flex flex-col items-center text-center">
+        <h2 className="text-3xl md:text-4xl font-display font-light text-neutral-900 dark:text-white mb-6">
+          Nossa <span className="font-bold">História</span>
+        </h2>
+        <p className="text-neutral-500 dark:text-neutral-400 max-w-2xl text-xl leading-relaxed font-light mb-10">
+          Maturidade Neurodivergente é um manifesto pela acessibilidade e validação de vivências adultas, criado por neurodivergentes, para neurodivergentes.
+        </p>
+        <Link href="/about" className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-neutral-900 dark:text-white hover:opacity-70 transition-opacity">
+          <span>Conheça o Projeto</span>
+          <span>&rarr;</span>
+        </Link>
       </div>
 
     </div>

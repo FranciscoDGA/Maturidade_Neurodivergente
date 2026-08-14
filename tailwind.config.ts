@@ -14,35 +14,38 @@ const config: Config = {
       },
       colors: {
         primary: {
-          50: "#f0fdf4",
-          100: "#dcfce7",
-          500: "#22c55e", 
-          600: "#16a34a",
-          700: "#15803d",
+          50: "#fafafa",
+          100: "#f4f4f5",
+          500: "#3f3f46", // Dark slate for primary actions
+          600: "#27272a",
+          700: "#18181b",
         },
         accent: {
-          500: "#0ea5e9", // Muted blue for links/accents, not purple
-          600: "#0284c7",
+          500: "#71717a", // Muted zinc for subtle borders
+          600: "#52525b",
         },
         neutral: {
-          50: "#fafaf9", // Warm off-white
-          100: "#f5f5f4",
-          200: "#e7e5e4",
-          300: "#d6d3d1",
-          700: "#44403c",
-          800: "#292524",
-          900: "#1c1917",
+          50: "#ffffff",  // Pure white for that paper feel
+          100: "#fafafa", // Extremely subtle off-white
+          200: "#f4f4f5", // Very light gray for soft borders
+          300: "#e4e4e7",
+          400: "#a1a1aa",
+          500: "#71717a",
+          600: "#52525b",
+          700: "#3f3f46",
+          800: "#27272a",
+          900: "#18181b",
         },
         dark: {
-          bg: "#1c1917", // Warm dark gray, not deep space
-          card: "#292524", // Solid card color
-          cardHover: "#44403c",
-          border: "#44403c",
-          text: "#fafaf9",
+          bg: "#09090b", // Deep rich almost-black
+          card: "#09090b", // Pure flat layout, no distinct cards
+          cardHover: "#18181b",
+          border: "#27272a",
+          text: "#fafafa",
         },
       },
       boxShadow: {
-        'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+        'soft': 'none', // Removed soft shadows completely for flatter, editorial look
       },
     },
   },
