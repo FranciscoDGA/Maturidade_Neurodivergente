@@ -12,40 +12,38 @@ export default function Newsletter() {
 
     setStatus("loading");
     
-    // Simulate API call
     setTimeout(() => {
       setStatus("success");
       setEmail("");
       
-      // Reset after 3 seconds
       setTimeout(() => setStatus("idle"), 3000);
     }, 1000);
   };
 
   return (
-    <div className="bg-primary-50 dark:bg-primary-900/20 border border-primary-100 dark:border-primary-800 rounded-2xl p-8 my-12 text-center max-w-2xl mx-auto">
-      <h3 className="text-2xl font-bold text-neutral-900 dark:text-white mb-2">
-        Acompanhe nossa jornada
+    <div className="border-t border-neutral-200 dark:border-neutral-800 pt-12 pb-12 mt-16 max-w-2xl mx-auto">
+      <h3 className="text-2xl font-display font-bold text-neutral-900 dark:text-white mb-4">
+        Acompanhe Nossa Jornada
       </h3>
-      <p className="text-neutral-600 dark:text-neutral-300 mb-6">
-        Receba novos artigos, dicas e reflexões sobre maturidade neurodivergente diretamente na sua caixa de entrada. Zero spam, prometemos.
+      <p className="text-neutral-500 dark:text-neutral-400 mb-8 font-light text-lg">
+        Receba novos artigos, reflexões e atualizações diretamente no seu e-mail. Apenas o essencial, sem ruído.
       </p>
 
-      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4">
         <input
           type="email"
           placeholder="Seu melhor e-mail"
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="flex-1 px-4 py-3 rounded-lg border border-neutral-300 dark:border-neutral-600 bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500"
+          className="flex-1 bg-transparent border-b border-neutral-300 dark:border-neutral-700 py-3 text-neutral-900 dark:text-white placeholder:text-neutral-500 focus:outline-none focus:border-neutral-900 dark:focus:border-white transition-colors rounded-none"
         />
         <button
           type="submit"
           disabled={status === "loading" || status === "success"}
-          className="bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap"
+          className="bg-neutral-900 hover:bg-neutral-800 dark:bg-white dark:hover:bg-neutral-200 text-white dark:text-neutral-900 font-semibold py-3 px-8 transition-colors disabled:opacity-50 disabled:cursor-not-allowed shrink-0"
         >
-          {status === "loading" ? "Enviando..." : status === "success" ? "Inscrito! 🎉" : "Inscrever-se"}
+          {status === "loading" ? "Enviando..." : status === "success" ? "Inscrito!" : "Inscrever-se"}
         </button>
       </form>
     </div>

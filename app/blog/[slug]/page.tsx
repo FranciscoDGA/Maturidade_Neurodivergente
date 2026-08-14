@@ -159,7 +159,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             {post.title}
           </h1>
           <div className="flex flex-wrap gap-4 items-center text-neutral-600 dark:text-neutral-400">
-            <span className="inline-block bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 text-sm font-semibold px-3 py-1 rounded-full">
+            <span className="inline-block text-xs uppercase tracking-widest text-neutral-500 font-semibold px-3 py-1 border border-neutral-200 dark:border-neutral-800">
               {post.category}
             </span>
             <span>{formattedDate}</span>
@@ -177,7 +177,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               src={metaPost.coverImage}
               alt={post.title}
               fill
-              className="object-cover"
+              className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
               priority
             />
           </div>
@@ -209,11 +209,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
       {/* Related Posts */}
       {relatedPostsSlugs.length > 0 && (
-        <section className="mt-16 pt-16 border-t border-neutral-200 dark:border-neutral-700">
-          <h2 className="text-3xl font-bold mb-8 text-neutral-900 dark:text-white">
-            📚 Artigos Relacionados
+        <section className="mt-24 pt-16 border-t border-neutral-200 dark:border-neutral-800">
+          <h2 className="text-2xl font-display font-bold mb-12 text-neutral-900 dark:text-white">
+            Artigos Relacionados
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
             {relatedPostsSlugs.map((relPost) => (
               <BlogCard key={relPost.slug} post={relPost} />
             ))}
