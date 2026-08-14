@@ -6,7 +6,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Acessibilidade: Reduz animações para usuários com preferência */
+/* Accessibility: Reduce motion for users with preference */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -16,13 +16,13 @@ html {
   }
 }
 
-/* Skip to main content link (acessibilidade) */
+/* Skip to main content link (accessibility) */
 .skip-to-main {
   position: absolute;
   top: -9999px;
   left: 0;
   z-index: 50;
-  background-color: #4a6bff;
+  background-color: #0284c7;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 0.375rem;
@@ -32,7 +32,7 @@ html {
   top: 0;
 }
 
-/* Artigo - alinhamento consistente */
+/* Article consistent alignment */
 .prose {
   text-align: left !important;
 }
@@ -54,57 +54,61 @@ html {
 
 /* Links */
 a {
-  color: #4a6bff;
+  color: #0284c7;
   transition: color 0.2s ease;
   text-decoration-offset: 0.25rem;
 }
 
 a:hover {
-  color: #3d56cc;
+  color: #0369a1;
   text-decoration: underline;
 }
 
 .dark a:hover {
-  color: #8ba5ff;
+  color: #38bdf8;
 }
 
-/* Headings - respeitar alinhamento do prose */
+/* Headings */
 .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
   font-family: var(--font-outfit), sans-serif;
-  font-weight: bold;
-  letter-spacing: -0.025em;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: inherit;
 }
 
 /* Code blocks */
 code {
-  background-color: #f5f5f5;
-  color: #2d3748;
+  background-color: #f5f5f4;
+  color: #44403c;
   padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
+  border-radius: 0.375rem;
   font-family: monospace;
   font-size: 0.875rem;
 }
 
 .dark code {
-  background-color: #16213e;
-  color: #e0e0e0;
+  background-color: #292524;
+  color: #d6d3d1;
 }
 
 pre {
-  background-color: #f5f5f5;
-  color: #2d3748;
-  padding: 1rem;
+  background-color: #f5f5f4;
+  color: #44403c;
+  padding: 1.25rem;
   border-radius: 0.5rem;
   overflow-x: auto;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+  border: 1px solid #e7e5e4;
 }
 
 .dark pre {
-  background-color: #16213e;
-  color: #e0e0e0;
+  background-color: #1c1917;
+  color: #d6d3d1;
+  border-color: #44403c;
 }
 
 pre code {
   background-color: transparent;
   padding: 0;
+  border: none;
 }

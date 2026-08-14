@@ -14,51 +14,35 @@ const config: Config = {
       },
       colors: {
         primary: {
-          50: "#f0fdfa",
-          100: "#ccfbf1",
-          500: "#14b8a6", // Teal/Esmeralda suave e moderno
-          600: "#0d9488",
-          700: "#0f766e",
+          50: "#f0fdf4",
+          100: "#dcfce7",
+          500: "#22c55e", 
+          600: "#16a34a",
+          700: "#15803d",
         },
         accent: {
-          500: "#8b5cf6", // Roxo vibrante para gradientes
-          600: "#7c3aed",
+          500: "#0ea5e9", // Muted blue for links/accents, not purple
+          600: "#0284c7",
         },
         neutral: {
-          50: "#fafafa",
-          100: "#f4f4f5",
-          200: "#e4e4e7",
-          300: "#d4d4d8",
-          700: "#3f3f46",
-          800: "#27272a",
-          900: "#18181b",
+          50: "#fafaf9", // Warm off-white
+          100: "#f5f5f4",
+          200: "#e7e5e4",
+          300: "#d6d3d1",
+          700: "#44403c",
+          800: "#292524",
+          900: "#1c1917",
         },
         dark: {
-          bg: "#0B0D17", // Fundo luxuoso profundo
-          card: "rgba(255, 255, 255, 0.03)", // Glassmorphism
-          cardHover: "rgba(255, 255, 255, 0.08)",
-          border: "rgba(255, 255, 255, 0.1)",
-          text: "#f4f4f5",
+          bg: "#1c1917", // Warm dark gray, not deep space
+          card: "#292524", // Solid card color
+          cardHover: "#44403c",
+          border: "#44403c",
+          text: "#fafaf9",
         },
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'mesh-dark': 'radial-gradient(at 40% 20%, rgba(124, 58, 237, 0.15) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(20, 184, 166, 0.15) 0px, transparent 50%), radial-gradient(at 0% 50%, rgba(139, 92, 246, 0.1) 0px, transparent 50%)',
-      },
       boxShadow: {
-        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.3)',
-        'glass-light': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
-        'glow': '0 0 20px rgba(124, 58, 237, 0.3)',
-      },
-      animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-      },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
-        }
+        'soft': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
       },
     },
   },
