@@ -12,18 +12,16 @@ export default function BlogCard({ post }: { post: PostMetadata }) {
   return (
     <article className="group flex flex-col h-full border-t border-neutral-200 dark:border-neutral-800 pt-6">
       {/* Cover Image Area */}
-      <Link href={`/blog/${post.slug}`} className="relative w-full h-48 sm:h-56 overflow-hidden mb-6 block">
-        {post.coverImage ? (
+      {post.coverImage && (
+        <Link href={`/blog/${post.slug}`} className="relative w-full h-48 sm:h-56 overflow-hidden mb-6 block">
           <Image
             src={post.coverImage}
             alt={post.title}
             fill
             className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
           />
-        ) : (
-          <div className="absolute inset-0 bg-neutral-100 dark:bg-neutral-900" />
-        )}
-      </Link>
+        </Link>
+      )}
 
       {/* Content Area */}
       <div className="flex flex-col flex-grow">
