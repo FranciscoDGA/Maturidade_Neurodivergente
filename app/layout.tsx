@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     "Um espaço inclusivo para entender neurodiversidade, TDAH, autismo e maturidade neurodivergente com clareza, compaixão e acessibilidade.",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://maturidadeneurodivergente-5d3adfs94.vercel.app"
+    process.env.NEXT_PUBLIC_SITE_URL || "https://maturidadeneurodivergente.vercel.app"
   ),
   alternates: {
     canonical: "/",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://maturidadeneurodivergente-5d3adfs94.vercel.app",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://maturidadeneurodivergente.vercel.app",
     siteName: "Maturidade Neurodivergente",
     title: "Maturidade Neurodivergente | Neurodiversidade, TDAH, Autismo",
     description:

@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!post) return {};
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://maturidadeneurodivergente-5d3adfs94.vercel.app";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://maturidadeneurodivergente.vercel.app";
   const url = `${baseUrl}/blog/${slug}`;
   const ogImage = metaPost?.coverImage || "/images/og-default.png";
 
@@ -102,6 +102,37 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     day: "numeric",
   });
 
+  const words = post.content.split(/\s+/).length;
+  const readingTime = Math.max(1, Math.ceil(words / 200));
+
+  const headingsRegex = /^## (.+)$/gm;
+  const headings: { text: string; id: string }[] = [];
+  let hMatch;
+  while ((hMatch = headingsRegex.exec(post.content)) !== null) {
+    const text = hMatch[1].trim();
+    if (text.toLowerCase().includes("perguntas frequentes") || text.toLowerCase().includes("fontes")) continue;
+    const id = text
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "");
+    headings.push({ text, id });
+  }
+
+  const mdxComponents = {
+    h2: ({ children }: any) => {
+      const text = typeof children === "string" ? children : Array.isArray(children) ? children.join("") : "";
+      const id = text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
+      return <h2 id={id} className="scroll-mt-24">{children}</h2>;
+    },
+  };
+
   return (
     <>
       {/* JSON-LD Structured Data */}
@@ -167,6 +198,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             </span>
             <span>{formattedDate}</span>
             <span>•</span>
+            <span>⏱️ {readingTime} min de leitura</span>
+            <span>•</span>
             <span>Por {post.author && post.author !== "Maturidade Neurodivergente" ? post.author : "Francisco Gomes"}</span>
             <div className="ml-auto bg-white/50 dark:bg-black/20 rounded-full">
               <FavoriteButton slug={post.slug} />
@@ -186,12 +219,36 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </div>
         )}
 
+        {/* Table of Contents */}
+        {headings.length > 1 && (
+          <div className="my-8 p-6 border border-neutral-200 dark:border-neutral-800 bg-neutral-100/50 dark:bg-neutral-900/40">
+            <h4 className="text-xs uppercase tracking-widest font-bold text-neutral-500 mb-4">
+              Neste Artigo
+            </h4>
+            <ul className="space-y-2">
+              {headings.map((h, idx) => (
+                <li key={h.id} className="text-sm">
+                  <a
+                    href={`#${h.id}`}
+                    className="text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors flex items-baseline gap-2"
+                  >
+                    <span className="font-mono text-xs text-neutral-400">
+                      {String(idx + 1).padStart(2, "0")}.
+                    </span>
+                    <span>{h.text}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         <AudioReader contentId="article-content" />
 
         {/* Article Content */}
         <div id="article-content" className="prose prose-lg prose-neutral dark:prose-invert max-w-none mb-12">
           <div className="leading-relaxed space-y-6">
-            <MDXRemote source={post.content} />
+            <MDXRemote source={post.content} components={mdxComponents} />
           </div>
         </div>
 

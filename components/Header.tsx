@@ -8,6 +8,7 @@ const navigation = [
   { name: "Início", href: "/" },
   { name: "Sobre", href: "/about" },
   { name: "Blog", href: "/blog" },
+  { name: "Teste TDAH", href: "/teste-tdah" },
   { name: "Contato", href: "/contact" },
 ];
 

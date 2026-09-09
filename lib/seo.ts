@@ -8,7 +8,7 @@ export interface SEOMetadata {
 }
 
 const getBaseUrl = () =>
-  process.env.NEXT_PUBLIC_SITE_URL || "https://maturidadeneurodivergente-5d3adfs94.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://maturidadeneurodivergente.vercel.app";
 
 export function generateMetadata(seo: SEOMetadata) {
   return {

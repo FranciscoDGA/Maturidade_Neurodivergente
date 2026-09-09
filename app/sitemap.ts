@@ -3,7 +3,7 @@ import { allPosts } from '@/data/posts';
 import { getAllStories } from '@/data/stories';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://maturidadeneurodivergente-5d3adfs94.vercel.app';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://maturidadeneurodivergente.vercel.app';
 
   const blogPosts = allPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const routes = ['', '/blog', '/about', '/contact', '/privacy', '/terms', '/cookies', '/stories'].map(
+  const routes = ['', '/blog', '/about', '/contact', '/teste-tdah', '/privacy', '/terms', '/cookies', '/stories'].map(
     (route) => ({
       url: `${baseUrl}${route}`,
       lastModified: new Date(),

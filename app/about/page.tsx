@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://maturidadeneurodivergente-5d3adfs94.vercel.app"}/about`,
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://maturidadeneurodivergente.vercel.app"}/about`,
     title: "Sobre Nós | Maturidade Neurodivergente",
     description:
       "Um espaço inclusivo, acessível e compassivo para neurodivergentes explorarem maturidade emocional e autoconhecimento.",
