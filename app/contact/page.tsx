@@ -119,15 +119,30 @@ export default function Contact() {
         {/* Contact Info Sidebar */}
         <div className="lg:col-span-2 space-y-12 lg:border-l lg:border-neutral-200 dark:border-neutral-800 lg:pl-12">
           <div>
-            <h3 className="text-xs uppercase tracking-widest text-neutral-500 font-semibold mb-4">
-              Contato Direto
+            <h3 className="text-xs uppercase tracking-widest text-neutral-500 font-semibold mb-2">
+              Editoria & Contato
             </h3>
+            <p className="text-neutral-900 dark:text-white font-medium text-base mb-1">
+              Francisco Gomes
+            </p>
+            <p className="text-xs text-neutral-500 mb-4">
+              Fundador & Pesquisador Independente
+            </p>
             <a
               href="mailto:contato@maturidadeneurodivergente.com"
-              className="text-neutral-900 dark:text-white text-lg font-light hover:text-neutral-600 transition-colors break-all"
+              className="text-neutral-900 dark:text-white text-base font-light hover:text-neutral-600 transition-colors break-all"
             >
               contato@maturidadeneurodivergente.com
             </a>
+          </div>
+
+          <div className="border border-neutral-200 dark:border-neutral-800 p-6 bg-neutral-100/50 dark:bg-neutral-900/30">
+            <h3 className="text-xs uppercase tracking-widest text-neutral-900 dark:text-white font-bold mb-2">
+              Aviso Importante
+            </h3>
+            <p className="text-neutral-500 dark:text-neutral-400 text-xs leading-relaxed">
+              Não realizamos consultas médicas, diagnósticos ou atendimentos psicológicos por e-mail. Este canal destina-se a dúvidas editoriais, parcerias, sugestões de pauta e correções de artigos.
+            </p>
           </div>
 
           <div>

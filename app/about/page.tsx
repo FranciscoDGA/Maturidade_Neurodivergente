@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://maturidadeneurodivergente.com.br/about",
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://maturidadeneurodivergente-5d3adfs94.vercel.app"}/about`,
     title: "Sobre Nós | Maturidade Neurodivergente",
     description:
       "Um espaço inclusivo, acessível e compassivo para neurodivergentes explorarem maturidade emocional e autoconhecimento.",
@@ -44,6 +44,41 @@ export default function About() {
             </p>
             <p className="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed">
               Acreditamos que a maturidade neurodivergente só é possível quando nos permitimos ser quem somos, entender como funcionamos biologicamente e construir uma arquitetura de vida que respeite nossos ritmos, e não lute contra eles.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Quem Escreve / O Autor */}
+      <div className="border-t border-neutral-200 dark:border-neutral-800 pt-16 mb-24">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div>
+            <h2 className="text-3xl font-display font-bold text-neutral-900 dark:text-white mb-6">
+              Quem Escreve
+            </h2>
+            <div className="flex items-center gap-4 mt-6">
+              <div className="w-16 h-16 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 flex items-center justify-center font-display font-bold text-xl flex-shrink-0 tracking-wider">
+                FG
+              </div>
+              <div>
+                <h3 className="font-display font-bold text-xl text-neutral-900 dark:text-white">
+                  Francisco Gomes
+                </h3>
+                <p className="text-xs uppercase tracking-widest text-neutral-500 font-semibold">
+                  Fundador, Editor & Pesquisador Independente
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="space-y-6">
+            <p className="text-neutral-900 dark:text-neutral-300 text-lg leading-relaxed font-light">
+              Sou um adulto neurodivergente que vivenciou na pele os desafios, as dúvidas e o alívio do diagnóstico tardio. Criei o <strong>Maturidade Neurodivergente</strong> para ser o espaço que eu gostaria de ter encontrado quando comecei a entender o meu próprio cérebro.
+            </p>
+            <p className="text-neutral-600 dark:text-neutral-400 text-base leading-relaxed">
+              <strong>Importante: não sou médico, psiquiatra ou psicólogo.</strong> Minha escrita parte da perspectiva de quem vive a neurodivergência no dia a dia, combinando pesquisa autodidata contínua, curadoria cuidadosa, estratégias de organização e acolhimento para adultos que buscam amadurecer com respeito aos seus limites.
+            </p>
+            <p className="text-neutral-600 dark:text-neutral-400 text-base leading-relaxed">
+              Cada publicação é feita com compromisso ético e transparência, sempre orientando o leitor a buscar avaliação com profissionais de saúde mental habilitados para diagnósticos ou tratamentos.
             </p>
           </div>
         </div>

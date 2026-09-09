@@ -3,7 +3,7 @@ import { allPosts } from '@/data/posts';
 import { getAllStories } from '@/data/stories';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://maturidadeneurodivergente.com.br';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://maturidadeneurodivergente-5d3adfs94.vercel.app';
 
   const blogPosts = allPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,

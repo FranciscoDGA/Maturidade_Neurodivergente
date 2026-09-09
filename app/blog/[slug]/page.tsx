@@ -10,6 +10,8 @@ import AudioReader from "@/components/AudioReader";
 import Comments from "@/components/Comments";
 import Newsletter from "@/components/Newsletter";
 import CommunityCTA from "@/components/CommunityCTA";
+import AuthorBox from "@/components/AuthorBox";
+import MedicalDisclaimer from "@/components/MedicalDisclaimer";
 import { generateBlogPostSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/seo";
 
 export async function generateStaticParams() {
@@ -26,7 +28,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!post) return {};
 
-  const url = `https://maturidadeneurodivergente.com.br/blog/${slug}`;
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://maturidadeneurodivergente-5d3adfs94.vercel.app";
+  const url = `${baseUrl}/blog/${slug}`;
   const ogImage = metaPost?.coverImage || "/images/og-default.png";
 
   return {
@@ -164,7 +167,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             </span>
             <span>{formattedDate}</span>
             <span>•</span>
-            <span>Por {post.author}</span>
+            <span>Por {post.author && post.author !== "Maturidade Neurodivergente" ? post.author : "Francisco Gomes"}</span>
             <div className="ml-auto bg-white/50 dark:bg-black/20 rounded-full">
               <FavoriteButton slug={post.slug} />
             </div>
@@ -191,6 +194,10 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             <MDXRemote source={post.content} />
           </div>
         </div>
+
+        {/* E-E-A-T: Medical Disclaimer & Author Attribution */}
+        <MedicalDisclaimer />
+        <AuthorBox authorName={post.author && post.author !== "Maturidade Neurodivergente" ? post.author : "Francisco Gomes"} />
 
         {/* Navigation */}
         <div className="border-t border-neutral-200 dark:border-neutral-700 pt-8 mt-12 flex gap-4 justify-between">

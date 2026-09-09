@@ -7,6 +7,9 @@ export interface SEOMetadata {
   canonical?: string;
 }
 
+const getBaseUrl = () =>
+  process.env.NEXT_PUBLIC_SITE_URL || "https://maturidadeneurodivergente-5d3adfs94.vercel.app";
+
 export function generateMetadata(seo: SEOMetadata) {
   return {
     title: seo.title,
@@ -34,6 +37,9 @@ export function generateBlogPostSchema(post: {
   author?: string;
   keywords?: string[];
 }) {
+  const baseUrl = getBaseUrl();
+  const authorName = post.author && post.author !== "Maturidade Neurodivergente" ? post.author : "Francisco Gomes";
+
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -42,30 +48,42 @@ export function generateBlogPostSchema(post: {
     datePublished: post.date,
     author: {
       "@type": "Person",
-      name: post.author || "Maturidade Neurodivergente",
+      name: authorName,
+      jobTitle: "Criador & Editor",
+      url: `${baseUrl}/about`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Maturidade Neurodivergente",
+      url: baseUrl,
     },
     keywords: post.keywords?.join(", "),
   };
 }
 
 export function generateOrganizationSchema() {
+  const baseUrl = getBaseUrl();
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Maturidade Neurodivergente",
     description:
-      "Um espaço inclusivo para entender maturidade neurodivergente com clareza, compaixão e acessibilidade.",
-    url: "https://maturidadeneurodivergente.com.br",
-    logo: "https://maturidadeneurodivergente.com.br/logo.png",
+      "Um espaço independente e inclusivo para entender a neurodiversidade na vida adulta com base em vivências e maturidade emocional.",
+    url: baseUrl,
+    logo: `${baseUrl}/logo.png`,
+    founder: {
+      "@type": "Person",
+      name: "Francisco Gomes",
+    },
     sameAs: [
       "https://instagram.com/maturidadend",
       "https://twitter.com/maturidadend",
-      "https://linkedin.com/company/maturidadend",
     ],
   };
 }
 
 export function generateBreadcrumbSchema(items: { name: string; url: string }[]) {
+  const baseUrl = getBaseUrl();
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -73,7 +91,7 @@ export function generateBreadcrumbSchema(items: { name: string; url: string }[])
       "@type": "ListItem",
       position: index + 1,
       name: item.name,
-      item: `https://maturidadeneurodivergente.com.br${item.url}`,
+      item: `${baseUrl}${item.url}`,
     })),
   };
 }
